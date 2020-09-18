@@ -1,0 +1,133 @@
+* {
+    color: white;
+    margin: 0;
+}
+body {
+    width: 80%;
+    margin: 0 auto;
+}
+body * {
+    background-color: green;
+}
+img {
+    width: 200px;
+    height: 100px;
+}
+main section {
+    font-size: 0.8em;
+    font-family: Arial;
+    padding: 0px 10px 0px 10px;
+}
+header {
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+}
+footer {
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+main, nav {
+    margin-top: 10px;
+}
+nav {
+    border: 2px solid whitesmoke;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+}
+.navbar-container {
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.navbar-header {
+    height: 50px;
+    width: 50px;
+    font-size: 0.8rem;
+}
+.navbar-brand {
+    height: 50px;
+    width: 50px;
+}
+.navbar-links ul{
+    text-decoration: none;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0px;
+}
+.navbar-links li{
+    border: 2px solid whitesmoke;
+    display: flex;
+    height: 48px;
+    width: 48px;
+}
+.navbar-links {
+    margin: auto;
+}
+.navbar-container * {
+    justify-content: center;
+    align-items: center;
+}
+form ul {
+    text-decoration: none;
+    list-style-type: none;
+}
+.blogPost {
+    width: 30%;
+    height: 150px;
+    border: 1px solid black;
+    background: white;
+}
+.blogImg {
+    width: 100%;
+}
+.blogSection {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    align-items: flex-end;
+}
+#blogPostSpecial {
+    order: 1;
+    align-self: flex-start;
+    flex-grow: 0.5;
+}
+
+@media screen and (min-width : 320px) {
+	body * {
+        background-color: lightblue;
+    }
+    main section {
+        font-size: 1.5rem;
+    }
+    .blogHeader {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+@media screen and (min-width : 768px) {
+	body * {
+        background-color: yellowgreen;
+    }
+    main section {
+        font-size: 1.25rem;
+    }
+    .blogHeader {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+@media screen and (min-width : 1024px) {
+	body * {
+        background-color: blue;
+        color:  yellowgreen;
+    }
+    main section {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}

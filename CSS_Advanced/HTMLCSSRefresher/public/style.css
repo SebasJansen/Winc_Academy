@@ -1,0 +1,79 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    color: #6A6A6A;
+}
+main {
+    display: flex;
+    justify-content: center;
+    grid-gap: 10px;
+    grid-template: 1fr / 1fr 1fr;
+}
+main h1:first-child {
+    height: 30px;
+    color: #000;
+    font-size: 1.3em;
+    margin-bottom: 0;
+}
+main h1:last-of-type {
+    color: #ABABAB;
+    font-size: 1em;
+    margin-top: 5px;
+}
+.card {
+    background: white;
+    width: 350px;
+    height: auto;
+    border: 2px solid #F1F1F1;
+    border-radius: 5px;
+    display: grid;
+    grid-template: 1fr 60px / 1fr;
+}
+.cardInfo {
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-area: 1/1/2/1;
+}
+.cardHeader {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 50px;
+    height: 80px;
+}
+.profilePicture {
+    grid-area: 1/2/2/3;
+    margin-top: 13px;
+}
+.profilePicture img {
+    width: 50px;
+    height: 50px; 
+    object-fit: cover;
+}
+.cardButtons {
+    border-top: 1px solid lightgrey;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: 2/1/3/1;
+}
+input[type="button"] {
+    background: white;
+    font-size: 14;
+    font-weight: bold;
+    width: 120px;
+    height: 40px;
+    border: 0;
+    padding: 0;
+}
+input[value="Approve"] {
+    color: #15C748;
+    border: 2px solid rgb(125,222,147, .7);
+    border-left: 1px solid rgb(125,222,147, .7);
+    border-right: none;
+    border-radius: 5px 0 0 5px;
+}
+input[value="Decline"] {
+    color: #F33342;
+    border: 2px solid rgb(239,13,34, .7);
+    border-right: 1px solid rgb(239,13,34, .7);
+    border-radius: 0 5px 5px 0;
+}

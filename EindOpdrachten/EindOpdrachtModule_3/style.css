@@ -1,0 +1,23 @@
+body {
+    background-color: #fff;
+}
+img {
+    width: 20px;
+    height: 20px;
+}
+.menu {
+    list-style-type: none;
+}
+.color {
+    width: 30%;
+    margin: 5px;
+}
+
+#container {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+h1 {
+    color: white;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Simpele Pagina</title>
+    <link rel="stylesheet" type="text/css" href="public/styles.css">
+</head>
+
+<body>
+    <nav>
+        <div class="navbar-container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="index.html">CSS-Box-Model</a>
+            </div>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">about</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                    <li><a href="blog.html">blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1>Dit is het contact form</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Vul het gehele lange formulier in aub</h2>
+            <form name="contact" method="POST" data-netlify="true" action="">
+                <p>
+                    <label>Naam:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" /></label>
+                </p>
+                <p>
+                    <label>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="email" name="email" /></label>
+                </p>
+                <p>
+                    <label>Telefoonnummer:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="tel" name="tel" /></label>
+                </p>
+                <p>
+                    <label>Leeftijd:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="age" /></label>
+                </p>
+                <p>
+                    <label>Geboortedatum:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="date" name="birthday" /></label>
+                </p>
+                <p>
+                    <label>Geslacht:</label>
+                <ul>
+                    <li>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label>Male</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label>Female</label>
+                    </li>
+                    <li>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label>Other</label>
+                    </li>
+                </ul>
+                </p>
+                <p>
+                    <label>Favoriete cuisine(choose 1!):</label>
+                <ul>
+                    <li>
+                        <input type="checkbox" id="cuisine1" name="favCuisine" value="French">
+                        <label> Frans</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="cuisine2" name="favCuisine" value="Italian">
+                        <label> Italiaans</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="cuisine3" name="favCuisine" value="Spanish">
+                        <label> Spaans</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="cuisine4" name="favCuisine" value="Arabic">
+                        <label> Arabisch</label>
+                    </li>
+                </ul>
+                </p>
+                <p>
+                    <label>Favoriete kleur van short:</label>
+                    <input type="color" id="favcolor" name="favcolor">
+                </p>
+                <p>
+                    <label>Biografie: <textarea name="bio"></textarea></label>
+                </p>
+                <p>
+                    <label>Upload je laatste recept: </label>
+                    <input type="file" id="latestRecipe" name="latestRecipe">
+                </p>
+                <p>
+                    <label>Url naar je recepten website:</label>
+                    <input type="url" id="recipePage" name="recipePage">
+                </p>
+                <p>
+                    <button type="reset">reset</button>
+                    <button type="submit">verstuur</button>
+                </p>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h1>Sebastiaan Jansen</h1>
+    </footer>
+</body>
+
+</html>

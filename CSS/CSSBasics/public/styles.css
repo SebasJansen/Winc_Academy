@@ -1,0 +1,17 @@
+body {
+    color: red;
+}
+.black-border {
+    border: 5px solid black;
+}
+#green-background {
+    background-color: green;
+}
+img {
+    width: 200px;
+    height: 100px;
+}
+main section {
+    font-size: 2em;
+    font-family: Arial;
+}

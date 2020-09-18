@@ -1,0 +1,273 @@
+body {
+  background: #c3cfe2;
+  color: #5B5B5B;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 0;
+}
+
+a {
+  color: #B0B3EA;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+}
+
+.card {
+  background: black;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template: 1fr / 1fr;
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, -webkit-transform 2s;
+  transition: width 2s, height 2s, transform 2s;
+  transition: width 2s, height 2s, transform 2s, -webkit-transform 2s;
+}
+
+.card__overlay {
+  background: gray;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1/1/2/2;
+  opacity: 1;
+  -webkit-animation-name: fadeInOpacity;
+          animation-name: fadeInOpacity;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-timing-function: ease-in;
+          animation-timing-function: ease-in;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.card__overlay:hover {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s 2s, opacity 2s linear;
+  transition: visibility 0s 2s, opacity 2s linear;
+}
+
+.card__content {
+  background: white;
+  height: 100%;
+  width: 100%;
+  border-radius: 15px;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-area: 1/1/2/2;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template: 2fr 1fr / 1fr;
+}
+
+.card__description {
+  background: white;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.card__image {
+  width: 114px;
+  height: 114px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.card__image img {
+  width: 100px;
+  height: 100px;
+  border: 7px solid white;
+  border-radius: 50%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  z-index: 1;
+  position: relative;
+  margin-top: 50%;
+}
+
+.card__footer {
+  background: #686de0;
+  border-radius: 0px 0px 15px 15px;
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+@-webkit-keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInOpacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 35%;
+  -ms-grid-column-align: right;
+      justify-self: right;
+  margin-right: 25px;
+}
+
+.sidebar__buttons div {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  -webkit-transition: width 2s;
+  transition: width 2s;
+}
+
+.sidebar__buttons div:hover {
+  width: 200px;
+}
+
+.sidebar__buttons .icon::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+
+.sidebar__buttons--blog {
+  background-color: #e17b77;
+}
+
+.sidebar__buttons--blog .fa-laptop-code::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 900;
+  content: "\f5fc";
+}
+
+.sidebar__buttons--twitter {
+  background-color: #00aced;
+}
+
+.sidebar__buttons--twitter .icon::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 900;
+  content: "\f099";
+}
+
+.sidebar__buttons--linkedin {
+  background-color: #007bb6;
+}
+
+.sidebar__buttons--linkedin .icon::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 900;
+  content: "\f0e1";
+}
+
+.sidebar__buttons--facebook {
+  background-color: #3b5998;
+}
+
+.sidebar__buttons--facebook .icon::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 900;
+  content: "\f39e";
+}
+
+.sidebar__buttons--github {
+  background-color: #333;
+}
+
+.sidebar__buttons--github .icon::before {
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 900;
+  content: "\f09b";
+}
+
+@media screen and (max-width: 320px) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .card__description {
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 320px) {
+  .container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-gap: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .card__description {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 3%;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .card__description {
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+  .card__description {
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
