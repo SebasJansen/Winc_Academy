@@ -116,7 +116,7 @@ a {
   display: grid;
   position: fixed;
   top: 35%;
-  left: 95%;
+  right: -230px;
 }
 
 .sidebar__buttons {
