@@ -33,13 +33,9 @@ a {
   -ms-grid-rows: 1fr;
   -ms-grid-columns: 1fr;
       grid-template: 1fr / 1fr;
-  -webkit-transition: width 2s, height 2s, -webkit-transform 2s;
-  transition: width 2s, height 2s, -webkit-transform 2s;
-  transition: width 2s, height 2s, transform 2s;
-  transition: width 2s, height 2s, transform 2s, -webkit-transform 2s;
 }
 
-.card__overlay {
+.card__content {
   background: gray;
   height: 100%;
   width: 100%;
@@ -49,25 +45,31 @@ a {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1/1/2/2;
-  opacity: 1;
-  -webkit-animation-name: fadeInOpacity;
-          animation-name: fadeInOpacity;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-  -webkit-animation-timing-function: ease-in;
-          animation-timing-function: ease-in;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.card__overlay:hover {
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: visibility 0s 2s, opacity 2s linear;
-  transition: visibility 0s 2s, opacity 2s linear;
+.card__form {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.card__content {
+.card__overlay {
   background: white;
   height: 100%;
   width: 100%;
@@ -77,81 +79,79 @@ a {
   -ms-grid-column: 1;
   -ms-grid-column-span: 1;
   grid-area: 1/1/2/2;
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -ms-grid-rows: 2fr 1fr;
   -ms-grid-columns: 1fr;
       grid-template: 2fr 1fr / 1fr;
+  opacity: 1;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
-.card__description {
-  background: white;
-  border-radius: 15px 15px 0px 0px;
+.card__overlay:hover {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
 .card__image {
-  width: 114px;
-  height: 114px;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-.card__image img {
-  width: 100px;
-  height: 100px;
-  border: 7px solid white;
-  border-radius: 50%;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  z-index: 1;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
   position: relative;
-  margin-top: 50%;
-}
-
-.card__footer {
-  background: #686de0;
-  border-radius: 0px 0px 15px 15px;
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 20px;
-}
-
-@-webkit-keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes fadeInOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 .sidebar {
+  display: -ms-grid;
+  display: grid;
   position: fixed;
   top: 35%;
-  -ms-grid-column-align: right;
-      justify-self: right;
-  margin-right: 25px;
+  left: 95%;
+}
+
+.sidebar__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.5rem;
+  line-height: 3.2;
 }
 
 .sidebar__buttons div {
-  width: 50px;
-  height: 50px;
-  position: relative;
-  -webkit-transition: width 2s;
-  transition: width 2s;
+  width: 300px;
+  height: 75px;
+  overflow: hidden;
+  color: white;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
 }
 
 .sidebar__buttons div:hover {
-  width: 200px;
+  -webkit-transform: translate(-220px, 0);
+          transform: translate(-220px, 0);
+}
+
+.sidebar__buttons div span {
+  margin-left: 25px;
 }
 
 .sidebar__buttons .icon::before {

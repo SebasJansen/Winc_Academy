@@ -1,0 +1,16 @@
+body {
+    background: black;
+    color: white;
+}
+#container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.card {
+    border: 1px solid red;
+    width: 100%;
+    height: auto;
+    justify-self: center;
+    align-content: space-around;
+    display: grid;
+}
