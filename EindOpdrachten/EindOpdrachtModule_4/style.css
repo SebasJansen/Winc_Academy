@@ -13,6 +13,9 @@ body {
     align-self: center;
     display: grid;
 }
+.card:hover {
+    cursor: pointer;
+}
 .card img {
     max-width: 100%;
     height: auto;
@@ -34,4 +37,7 @@ ul {
 }
 li {
     float: left;
+}
+input:hover {
+    cursor: pointer;
 }
