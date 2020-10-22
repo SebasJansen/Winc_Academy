@@ -34,7 +34,6 @@ const updateData = async () => {
             node.appendChild(deleteButton);
             listToDo.appendChild(node); 
             deleteButton.addEventListener ("click", function() {
-                alert("deleting todo with id: " + task.id);
                 deleteTodoData(task.id);
             });
         });
