@@ -1,0 +1,13 @@
+body {
+    background-color: blue;
+}
+button {
+    width: 21px;
+    height: 21px;
+}
+i {
+    display: inline-block;
+    font-size: 1.2em;
+    width: 21px;
+    height: 21px;
+}
