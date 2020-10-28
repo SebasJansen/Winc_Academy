@@ -65,7 +65,7 @@ describe("get_costs_for_plant", () => {
         yield: 30,
         costs: 15,
     };
-    test("Get cost for one seed", () => {
+    test("Get costs for one seed", () => {
         expect(get_costs_for_plant(corn)).toBe(15);
     });
 });
