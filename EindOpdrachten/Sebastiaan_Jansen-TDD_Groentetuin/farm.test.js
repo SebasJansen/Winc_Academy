@@ -5,7 +5,7 @@ const {
     get_costs_for_plant,
     get_costs_for_crop,
     get_revenue_for_plant,
-    // get_revenue_for_crop,
+    get_revenue_for_crop,
     // get_profit_for_plant,
     // get_profit_for_crop,
 } = require("./farm");
