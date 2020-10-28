@@ -135,3 +135,34 @@ describe("get_profit_for_crop", () => {
         expect(get_profit_for_crop(input)).toBe(50);
     });
 });
+describe("get_total_profit", () => {
+    test("Calculate total profit with multiple crops", () => {
+        const corn = {
+            name: "corn",
+            yield: 3,
+            costs: 1,
+            revenue: 2,
+        };
+        const pumpkin = {
+            name: "pumpkin",
+            yield: 4,
+            costs: 2,
+            revenue: 2,
+        };
+        const crops = [
+            { crop: corn, num_crops: 5 },
+            { crop: pumpkin, num_crops: 2 },
+        ];
+        expect(get_total_profit({ crops })).toBe(37);
+    });
+    test("Calculate total profit with 0 amount", () => {
+        const corn = {
+            name: "corn",
+            yield: 3,
+            costs: 1,
+            revenue: 2,
+        };
+        const crops = [{ crop: corn, num_crops: 0 }];
+        expect(get_total_profit({ crops })).toBe(0);
+    });
+});
