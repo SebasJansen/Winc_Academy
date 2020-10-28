@@ -1,6 +1,6 @@
 const {
     get_yield_for_plant,
-    // get_yield_for_crop,
+    get_yield_for_crop,
     // get_total_yield,
     // get_costs_for_plant,
     // get_costs_for_crop,

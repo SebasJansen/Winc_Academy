@@ -1,11 +1,11 @@
 const get_yield_for_plant = (plant) => {
     return plant.yield;
 }
-// const get_yield_for_crop = (cropObject) => {
-//     const yield_for_plant = get_yield_for_plant(cropObject.crop);
-//     const yield_for_crop = yield_for_plant * cropObject.num_crops;
-//     return yield_for_crop;
-// }
+const get_yield_for_crop = (cropObject) => {
+    const yield_for_plant = get_yield_for_plant(cropObject.crop);
+    const yield_for_crop = yield_for_plant * cropObject.num_crops;
+    return yield_for_crop;
+}
 // const get_total_yield = (cropsInput) => {
 //     let total_yield = 0;
 //     cropsInput.crops.forEach(crop => {
@@ -40,7 +40,7 @@ const get_yield_for_plant = (plant) => {
 
 module.exports = {
     get_yield_for_plant,
-    // get_yield_for_crop,
+    get_yield_for_crop,
     // get_total_yield,
     // get_costs_for_plant,
     // get_costs_for_crop,
