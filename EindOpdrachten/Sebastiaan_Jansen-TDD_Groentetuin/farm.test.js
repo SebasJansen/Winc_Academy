@@ -89,7 +89,7 @@ describe("get_revenue_for_plant", () => {
         name: "corn",
         yield: 30,
         costs: 15,
-        revenue: 5,
+        sale_price: 5,
     };
     test("Get revenue for one plant", () => {
         expect(get_revenue_for_plant(corn)).toBe(150);
@@ -101,7 +101,7 @@ describe("get_revenue_for_crop", () => {
             name: "corn",
             yield: 3,
             costs: 1,
-            revenue: 2,
+            sale_price: 2,
         };
         const input = {
             crop: corn,
@@ -115,7 +115,7 @@ describe("get_profit_for_plant", () => {
         name: "corn",
         yield: 30,
         costs: 15,
-        revenue: 5,
+        sale_price: 5,
     };
     test("Get profit for one plant", () => {
         expect(get_profit_for_plant(corn)).toBe(135);
@@ -127,7 +127,7 @@ describe("get_profit_for_crop", () => {
             name: "corn",
             yield: 3,
             costs: 1,
-            revenue: 2,
+            sale_price: 2,
         };
         const input = {
             crop: corn,
@@ -142,13 +142,13 @@ describe("get_total_profit", () => {
             name: "corn",
             yield: 3,
             costs: 1,
-            revenue: 2,
+            sale_price: 2,
         };
         const pumpkin = {
             name: "pumpkin",
             yield: 4,
             costs: 2,
-            revenue: 2,
+            sale_price: 2,
         };
         const crops = [
             { crop: corn, num_crops: 5 },
@@ -161,7 +161,7 @@ describe("get_total_profit", () => {
             name: "corn",
             yield: 3,
             costs: 1,
-            revenue: 2,
+            sale_price: 2,
         };
         const crops = [{ crop: corn, num_crops: 0 }];
         expect(get_total_profit({ crops })).toBe(0);

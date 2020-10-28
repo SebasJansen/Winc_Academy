@@ -22,7 +22,7 @@ const get_costs_for_crop = (cropObject) => {
     return costs_for_crop;
 }
 const get_revenue_for_plant = (plant) => {
-    return plant.revenue * plant.yield;
+    return plant.sale_price * plant.yield;
 }
 const get_revenue_for_crop = (cropObject) => {
     const revenue_for_plant = get_revenue_for_plant(cropObject.crop);
