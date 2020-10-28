@@ -94,21 +94,21 @@ describe("get_revenue_for_plant", () => {
         expect(get_revenue_for_plant(corn)).toBe(150);
     });
 });
-// describe("get_revenue_for_crop", () => {
-//     test("Get revenue for crop", () => {
-//         const corn = {
-//             name: "corn",
-//             yield: 3,
-//             costs: 1,
-//             revenue: 2,
-//         };
-//         const input = {
-//             crop: corn,
-//             num_crops: 10,
-//         };
-//         expect(get_revenue_for_crop(input)).toBe(60);
-//     });
-// });
+describe("get_revenue_for_crop", () => {
+    test("Get revenue for crop", () => {
+        const corn = {
+            name: "corn",
+            yield: 3,
+            costs: 1,
+            revenue: 2,
+        };
+        const input = {
+            crop: corn,
+            num_crops: 10,
+        };
+        expect(get_revenue_for_crop(input)).toBe(60);
+    });
+});
 // describe("get_profit_for_plant", () => {
 //     const corn = {
 //         name: "corn",
