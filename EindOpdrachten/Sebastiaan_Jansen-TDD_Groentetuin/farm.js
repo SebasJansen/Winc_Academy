@@ -32,11 +32,11 @@ const get_revenue_for_crop = (cropObject) => {
 const get_profit_for_plant = (plant) => {
     return get_revenue_for_plant(plant) - get_costs_for_plant(plant);
 }
-// const get_profit_for_crop = (cropObject) => {
-//     const profit_for_plant = get_profit_for_plant(cropObject.crop);
-//     const profit_for_crop = profit_for_plant * cropObject.num_crops;
-//     return profit_for_crop;
-// }
+const get_profit_for_crop = (cropObject) => {
+    const profit_for_plant = get_profit_for_plant(cropObject.crop);
+    const profit_for_crop = profit_for_plant * cropObject.num_crops;
+    return profit_for_crop;
+}
 
 module.exports = {
     get_yield_for_plant,
@@ -47,5 +47,5 @@ module.exports = {
     get_revenue_for_plant,
     get_revenue_for_crop,
     get_profit_for_plant,
-    // get_profit_for_crop,
+    get_profit_for_crop,
 };
