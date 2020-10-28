@@ -2,7 +2,7 @@ const {
     get_yield_for_plant,
     get_yield_for_crop,
     get_total_yield,
-    // get_costs_for_plant,
+    get_costs_for_plant,
     // get_costs_for_crop,
     // get_revenue_for_plant,
     // get_revenue_for_crop,
@@ -59,16 +59,16 @@ describe("get_total_yield", () => {
         expect(get_total_yield({ crops })).toBe(0);
     });
 });
-// describe("get_costs_for_plant", () => {
-//     const corn = {
-//         name: "corn",
-//         yield: 30,
-//         costs: 15,
-//     };
-//     test("Get cost for one seed", () => {
-//         expect(get_costs_for_plant(corn)).toBe(15);
-//     });
-// });
+describe("get_costs_for_plant", () => {
+    const corn = {
+        name: "corn",
+        yield: 30,
+        costs: 15,
+    };
+    test("Get cost for one seed", () => {
+        expect(get_costs_for_plant(corn)).toBe(15);
+    });
+});
 // describe("get_costs_for_crop", () => {
 //     test("Get costs for crop", () => {
 //         const corn = {

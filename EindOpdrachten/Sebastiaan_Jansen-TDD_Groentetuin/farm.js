@@ -13,9 +13,9 @@ const get_total_yield = (cropsInput) => {
     });
     return total_yield;
 }
-// const get_costs_for_plant = (plant) => {
-//     return plant.costs;
-// }
+const get_costs_for_plant = (plant) => {
+    return plant.costs;
+}
 // const get_costs_for_crop = (cropObject) => {
 //     const costs_for_plant = get_costs_for_plant(cropObject.crop);
 //     const costs_for_crop = costs_for_plant * cropObject.num_crops;
@@ -42,7 +42,7 @@ module.exports = {
     get_yield_for_plant,
     get_yield_for_crop,
     get_total_yield,
-    // get_costs_for_plant,
+    get_costs_for_plant,
     // get_costs_for_crop,
     // get_revenue_for_plant,
     // get_revenue_for_crop,
