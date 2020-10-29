@@ -15,6 +15,7 @@ const {
     get_revenue_for_crop_with_factors,
     get_profit_for_plant_with_factors,
     get_profit_for_crop_with_factors,
+    get_total_profit_with_factors
 } = require("./farm");
 
 describe("get_yield_for_plant", () => {
@@ -492,7 +493,7 @@ describe("get_total_profit_with_factors", () => {
             { crop: corn, num_crops: 5 },
             { crop: pumpkin, num_crops: 2 },
         ];
-        expect(get_total_profit_with_factors({ crops }, environment_factors_high)).toBe(18525);
+        expect(get_total_profit_with_factors({ crops }, environment_factors_high)).toBe(18550);
     });
     test("Calculate total profit with 0 amount with factors: sun = low, wind = low", () => {
         const corn = {
