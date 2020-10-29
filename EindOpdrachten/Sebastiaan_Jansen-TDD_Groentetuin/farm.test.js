@@ -13,6 +13,8 @@ const {
     get_yield_for_crop_with_factors,
     get_revenue_for_plant_with_factors,
     get_revenue_for_crop_with_factors,
+    get_profit_for_plant_with_factors,
+    get_profit_for_crop_with_factors,
 } = require("./farm");
 
 describe("get_yield_for_plant", () => {
@@ -396,3 +398,5 @@ describe("get_profit_for_crop_with_factors", () => {
         expect(get_profit_for_crop_with_factors(input, environment_factors_high)).toBe(37000);
     });
 });
+
+
