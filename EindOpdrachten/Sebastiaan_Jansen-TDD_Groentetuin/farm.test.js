@@ -11,6 +11,8 @@ const {
     get_total_profit,
     get_yield_for_plant_with_factors,
     get_yield_for_crop_with_factors,
+    get_revenue_for_plant_with_factors,
+    get_revenue_for_crop_with_factors,
 } = require("./farm");
 
 describe("get_yield_for_plant", () => {
@@ -62,6 +64,7 @@ describe("get_total_yield", () => {
         expect(get_total_yield({ crops })).toBe(0);
     });
 });
+
 describe("get_costs_for_plant", () => {
     const corn = {
         name: "corn",
@@ -72,6 +75,7 @@ describe("get_costs_for_plant", () => {
         expect(get_costs_for_plant(corn)).toBe(15);
     });
 });
+
 describe("get_costs_for_crop", () => {
     test("Get costs for crop", () => {
         const corn = {
@@ -86,6 +90,7 @@ describe("get_costs_for_crop", () => {
         expect(get_costs_for_crop(input)).toBe(10);
     });
 });
+
 describe("get_revenue_for_plant", () => {
     const corn = {
         name: "corn",
@@ -97,6 +102,7 @@ describe("get_revenue_for_plant", () => {
         expect(get_revenue_for_plant(corn)).toBe(150);
     });
 });
+
 describe("get_revenue_for_crop", () => {
     test("Get revenue for crop", () => {
         const corn = {
@@ -112,6 +118,7 @@ describe("get_revenue_for_crop", () => {
         expect(get_revenue_for_crop(input)).toBe(60);
     });
 });
+
 describe("get_profit_for_plant", () => {
     const corn = {
         name: "corn",
@@ -123,6 +130,7 @@ describe("get_profit_for_plant", () => {
         expect(get_profit_for_plant(corn)).toBe(135);
     });
 });
+
 describe("get_profit_for_crop", () => {
     test("Get profit for crop", () => {
         const corn = {
@@ -138,6 +146,7 @@ describe("get_profit_for_crop", () => {
         expect(get_profit_for_crop(input)).toBe(50);
     });
 });
+
 describe("get_total_profit", () => {
     test("Calculate total profit with multiple crops", () => {
         const corn = {
@@ -169,6 +178,7 @@ describe("get_total_profit", () => {
         expect(get_total_profit({ crops })).toBe(0);
     });
 });
+
 describe("get_yield_for_plant_with_factors", () => {
     const corn = {
         name: "corn",
@@ -201,6 +211,7 @@ describe("get_yield_for_plant_with_factors", () => {
         expect(get_yield_for_plant_with_factors(corn, environment_factors_high)).toBe(150);
     });
 });
+
 describe("get_yield_for_crop_with_factors", () => {
     const corn = {
         name: "corn",
@@ -237,6 +248,7 @@ describe("get_yield_for_crop_with_factors", () => {
         expect(get_yield_for_crop_with_factors(input, environment_factors_high)).toBe(1500);
     });
 });
+
 describe("get_revenue_for_plant_with_factors", () => {
     const corn = {
         name: "corn",
@@ -271,6 +283,7 @@ describe("get_revenue_for_plant_with_factors", () => {
         expect(get_revenue_for_plant_with_factors(corn, environment_factors_high)).toBe(3750);
     });
 });
+
 describe("get_revenue_for_crop_with_factors", () => {
     const corn = {
         name: "corn",
@@ -309,6 +322,7 @@ describe("get_revenue_for_crop_with_factors", () => {
         expect(get_revenue_for_crop_with_factors(input, environment_factors_high)).toBe(37500);
     });
 });
+
 describe("get_profit_for_plant_with_factors", () => {
     const corn = {
         name: "corn",
@@ -343,6 +357,7 @@ describe("get_profit_for_plant_with_factors", () => {
         expect(get_profit_for_plant_with_factors(corn, environment_factors_high)).toBe(3700);
     });
 });
+
 describe("get_profit_for_crop_with_factors", () => {
     const corn = {
         name: "corn",
