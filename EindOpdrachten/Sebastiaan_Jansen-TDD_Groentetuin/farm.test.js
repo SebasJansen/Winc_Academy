@@ -237,6 +237,78 @@ describe("get_yield_for_crop_with_factors", () => {
         expect(get_yield_for_crop_with_factors(input, environment_factors_high)).toBe(1500);
     });
 });
+describe("get_revenue_for_plant_with_factors", () => {
+    const corn = {
+        name: "corn",
+        yield: 100,
+        costs: 50,
+        sale_price: 25,
+        factors: {
+            sun: {
+                low: -50,
+                medium: 0,
+                high: 50,
+            },
+            wind: {
+                low: 0,
+                medium: -30,
+                high: -60,
+            },
+        },
+    };
+    const environment_factors_low = {
+        sun: "low",
+        wind: "low"
+    };
+    const environment_factors_high = {
+        sun: "high",
+        wind: "low"
+    };
+    test("Get revenue for plant with factors: sun = low, wind = low", () => {
+        expect(get_revenue_for_plant_with_factors(corn, environment_factors_low)).toBe(1250);
+    });
+    test("Get revenue for plant with factors: sun = high, wind = low", () => {
+        expect(get_revenue_for_plant_with_factors(corn, environment_factors_high)).toBe(3750);
+    });
+});
+describe("get_revenue_for_crop_with_factors", () => {
+    const corn = {
+        name: "corn",
+        yield: 100,
+        costs: 50,
+        sale_price: 25,
+        factors: {
+            sun: {
+                low: -50,
+                medium: 0,
+                high: 50,
+            },
+            wind: {
+                low: 0,
+                medium: -30,
+                high: -60,
+            },
+        },
+    };
+    const environment_factors_low = {
+        sun: "low",
+        wind: "low"
+    };
+    const environment_factors_high = {
+        sun: "high",
+        wind: "low"
+    };
+    const input = {
+        crop: corn,
+        num_crops: 10,
+    };
+    test("Get revenue for crop with factors: sun = low, wind = low", () => {
+        expect(get_revenue_for_crop_with_factors(input, environment_factors_low)).toBe(12500);
+    });
+    test("Get revenue for crop with factors: sun = high, wind = low", () => {
+        expect(get_revenue_for_crop_with_factors(input, environment_factors_high)).toBe(37500);
+    });
+});
 describe("get_profit_for_plant_with_factors", () => {
     const corn = {
         name: "corn",
