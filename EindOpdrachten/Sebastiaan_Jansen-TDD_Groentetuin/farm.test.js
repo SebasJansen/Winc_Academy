@@ -399,4 +399,151 @@ describe("get_profit_for_crop_with_factors", () => {
     });
 });
 
-
+describe("get_total_profit_with_factors", () => {
+    test("Calculate total profit with multiple crops with factors: sun = low, wind = low", () => {
+        const corn = {
+            name: "corn",
+            yield: 100,
+            costs: 50,
+            sale_price: 25,
+            factors: {
+                sun: {
+                    low: -50,
+                    medium: 0,
+                    high: 50,
+                },
+                wind: {
+                    low: 0,
+                    medium: -30,
+                    high: -60,
+                },
+            },
+        };
+        const pumpkin = {
+            name: "pumpkin",
+            yield: 10,
+            costs: 5,
+            sale_price: 2,
+            factors: {
+                sun: {
+                    low: -50,
+                    medium: 0,
+                    high: 50,
+                },
+                wind: {
+                    low: 0,
+                    medium: 0,
+                    high: -50,
+                },
+            },
+        };
+        const environment_factors_low = {
+            sun: "low",
+            wind: "low"
+        };
+        const crops = [
+            { crop: corn, num_crops: 5 },
+            { crop: pumpkin, num_crops: 2 },
+        ];
+        expect(get_total_profit_with_factors({ crops }, environment_factors_low)).toBe(6010);
+    });
+    test("Calculate total profit with multiple crops with factors: sun = high, wind = low", () => {
+        const corn = {
+            name: "corn",
+            yield: 100,
+            costs: 50,
+            sale_price: 25,
+            factors: {
+                sun: {
+                    low: -50,
+                    medium: 0,
+                    high: 50,
+                },
+                wind: {
+                    low: 0,
+                    medium: -30,
+                    high: -60,
+                },
+            },
+        };
+        const pumpkin = {
+            name: "pumpkin",
+            yield: 10,
+            costs: 5,
+            sale_price: 2,
+            factors: {
+                sun: {
+                    low: -50,
+                    medium: 0,
+                    high: 50,
+                },
+                wind: {
+                    low: 0,
+                    medium: 0,
+                    high: -50,
+                },
+            },
+        };
+        const environment_factors_high = {
+            sun: "high",
+            wind: "low"
+        };
+        const crops = [
+            { crop: corn, num_crops: 5 },
+            { crop: pumpkin, num_crops: 2 },
+        ];
+        expect(get_total_profit_with_factors({ crops }, environment_factors_high)).toBe(18525);
+    });
+    test("Calculate total profit with 0 amount with factors: sun = low, wind = low", () => {
+        const corn = {
+            name: "corn",
+            yield: 100,
+            costs: 50,
+            sale_price: 25,
+            factors: {
+                sun: {
+                    low: -50,
+                    medium: 0,
+                    high: 50,
+                },
+                wind: {
+                    low: 0,
+                    medium: -30,
+                    high: -60,
+                },
+            },
+        };
+        const environment_factors_low = {
+            sun: "low",
+            wind: "low"
+        };
+        const crops = [{ crop: corn, num_crops: 0 }];
+        expect(get_total_profit_with_factors({ crops }, environment_factors_low)).toBe(0);
+    });
+    test("Calculate total profit with 0 amount with factors: sun = high, wind = low", () => {
+        const corn = {
+            name: "corn",
+            yield: 100,
+            costs: 50,
+            sale_price: 25,
+            factors: {
+                sun: {
+                    low: -50,
+                    medium: 0,
+                    high: 50,
+                },
+                wind: {
+                    low: 0,
+                    medium: -30,
+                    high: -60,
+                },
+            },
+        };
+        const environment_factors_high = {
+            sun: "high",
+            wind: "low"
+        };
+        const crops = [{ crop: corn, num_crops: 0 }];
+        expect(get_total_profit_with_factors({ crops }, environment_factors_high)).toBe(0);
+    });
+});
