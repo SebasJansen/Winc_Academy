@@ -44,6 +44,37 @@ const get_total_profit = (cropsInput) => {
     });
     return total_profit;
 }
+const get_yield_for_plant_with_factors = (plant, factors) => {
+    const plantYieldNoFactors = plant.yield;
+    const environmentFactorSun = factors.sun;
+    const environmentFactorWind = factors.wind;
+    const plantFactorSun = plant.factors.sun[environmentFactorSun];
+    const plantFactorWind = plant.factors.wind[environmentFactorWind];
+    let plantYieldWithSunFactor = 0;
+    let plantYieldWithWindFactor = 0;
+    if (plantFactorSun === 0) {
+        plantYieldWithSunFactor = plantYieldNoFactors;
+    }
+    else if (Math.sign(plantFactorSun) === 1) {
+        plantYieldWithSunFactor = ((plantFactorSun / 100) * plantYieldNoFactors) + plantYieldNoFactors;
+    }
+    else {
+        plantYieldWithSunFactor = (plantYieldNoFactors * (plantFactorSun / 100)) + plantYieldNoFactors;
+    }
+    if (plantFactorWind === 0) {
+        plantYieldWithWindFactor = plantYieldWithSunFactor;
+        return plantYieldWithWindFactor;
+    }
+    else if (Math.sign(plantFactorWind) === 1) {
+        plantYieldWithWindFactor = ((plantFactorWind / 100) * plantYieldWithSunFactor) + plantYieldWithSunFactor;
+        return plantYieldWithWindFactor;
+    }
+    else {
+        plantYieldWithWindFactor = (plantYieldWithSunFactor * (plantFactorWind / 100)) + plantYieldWithSunFactor;
+        return plantYieldWithWindFactor;
+    }
+    
+}
 
 module.exports = {
     get_yield_for_plant,
@@ -56,4 +87,5 @@ module.exports = {
     get_profit_for_plant,
     get_profit_for_crop,
     get_total_profit,
+    get_yield_for_plant_with_factors,
 };
