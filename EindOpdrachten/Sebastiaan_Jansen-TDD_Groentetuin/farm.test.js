@@ -200,3 +200,39 @@ describe("get_yield_for_plant_with_factors", () => {
         expect(get_yield_for_plant_with_factors(corn, environment_factors_high)).toBe(150);
     });
 });
+describe("get_yield_for_crop_with_factors", () => {
+    const corn = {
+        name: "corn",
+        yield: 100,
+        factors: {
+            sun: {
+                low: -50,
+                medium: 0,
+                high: 50,
+            },
+            wind: {
+                low: 0,
+                medium: -30,
+                high: -60,
+            },
+        },
+    };
+    const environment_factors_low = {
+        sun: "low",
+        wind: "low"
+    };
+    const environment_factors_high = {
+        sun: "high",
+        wind: "low"
+    };
+    const input = {
+        crop: corn,
+        num_crops: 10,
+    };
+    test("Get yield for crop with factors: sun = low, wind = low", () => {
+        expect(get_yield_for_crop_with_factors(input, environment_factors_low)).toBe(500);
+    });
+    test("Get yield for crop with factors: sun = high, wind = low", () => {
+        expect(get_yield_for_crop_with_factors(input, environment_factors_high)).toBe(1500);
+    });
+});
