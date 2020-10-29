@@ -10,6 +10,7 @@ const {
     get_profit_for_crop,
     get_total_profit,
     get_yield_for_plant_with_factors,
+    get_yield_for_crop_with_factors,
 } = require("./farm");
 
 describe("get_yield_for_plant", () => {
