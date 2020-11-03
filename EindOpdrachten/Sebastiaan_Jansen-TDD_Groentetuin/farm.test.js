@@ -314,6 +314,10 @@ describe("get_revenue_for_crop_with_factors", () => {
         sun: "high",
         wind: "low"
     };
+    const environment_factors_medium = {
+        sun: "medium",
+        wind: "high"
+    };
     const input = {
         crop: corn,
         num_crops: 10,
@@ -323,6 +327,9 @@ describe("get_revenue_for_crop_with_factors", () => {
     });
     test("Get revenue for crop with factors: sun = high, wind = low", () => {
         expect(get_revenue_for_crop_with_factors(input, environment_factors_high)).toBe(37500);
+    });
+    test("Get revenue for crop with factors: sun = medium, wind = high", () => {
+        expect(get_revenue_for_crop_with_factors(input, environment_factors_medium)).toBe(10000);
     });
 });
 
