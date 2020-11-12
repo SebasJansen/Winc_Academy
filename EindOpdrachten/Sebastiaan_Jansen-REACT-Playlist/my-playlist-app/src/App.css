@@ -1,0 +1,87 @@
+.App {
+  text-align: center;
+}
+
+.header {
+  background-color: #282c34;
+  min-height: 8vh;
+  max-height: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+main {
+  background-color: #002672;
+  min-height: 92vh;
+  display: grid;
+  grid-template-rows: 54px 1fr;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.form {
+  background-color: #0035a0;
+  min-width: 100vw;
+  display: grid;
+  grid-row: 1/2;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+input[type=text], [type=number] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+select  {
+  padding: 11px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.listContainer {
+  background-color: #0055ff;
+  min-width: 100vw;
+  display: grid;
+  grid-row: 2/3;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+#songsTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  background-color: royalblue;
+  border: 1px solid #ddd;
+  padding: 8px;
+  margin-top: 5px;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+#songsTable tr:nth-child(even){background-color: #0077ff;}
+#songsTable tr:hover {background-color: rgb(0, 180, 180);}
+#songsTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #002fff;
+  color: white;
+}

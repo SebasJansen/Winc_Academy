@@ -15,29 +15,513 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <div class="tarotDagkaart"> 
+      <img src="https://www.helderinzicht.com/media/dagkaart/achter2.gif" alt="Random Image" id="random_image_tarot_dagkaart" class="border" style="max-width: 99%; height: auto">
+      <script language="javascript" type="text/javascript">
+        const imagesOne = new Array(78)
+        imagesOne[0] = ' https://www.helderinzicht.com/media/dagkaart/1.jpg ';
+        imagesOne[1] = ' https://www.helderinzicht.com/media/dagkaart/2.jpg ';
+        imagesOne[2] = ' https://www.helderinzicht.com/media/dagkaart/3.jpg ';
+        imagesOne[3] = ' https://www.helderinzicht.com/media/dagkaart/4.jpg ';
+        imagesOne[4] = ' https://www.helderinzicht.com/media/dagkaart/5.jpg ';
+        imagesOne[5] = ' https://www.helderinzicht.com/media/dagkaart/6.jpg ';
+        imagesOne[6] = ' https://www.helderinzicht.com/media/dagkaart/7.jpg ';
+        imagesOne[7] = ' https://www.helderinzicht.com/media/dagkaart/8.jpg ';
+        imagesOne[8] = ' https://www.helderinzicht.com/media/dagkaart/9.jpg ';
+        imagesOne[9] = ' https://www.helderinzicht.com/media/dagkaart/10.jpg ';
+        imagesOne[10] = ' https://www.helderinzicht.com/media/dagkaart/11.jpg ';
+        imagesOne[11] = ' https://www.helderinzicht.com/media/dagkaart/12.jpg ';
+        imagesOne[12] = ' https://www.helderinzicht.com/media/dagkaart/13.jpg ';
+        imagesOne[13] = ' https://www.helderinzicht.com/media/dagkaart/14.jpg ';
+        imagesOne[14] = ' https://www.helderinzicht.com/media/dagkaart/15.jpg ';
+        imagesOne[15] = ' https://www.helderinzicht.com/media/dagkaart/16.jpg ';
+        imagesOne[16] = ' https://www.helderinzicht.com/media/dagkaart/17.jpg ';
+        imagesOne[17] = ' https://www.helderinzicht.com/media/dagkaart/18.jpg ';
+        imagesOne[18] = ' https://www.helderinzicht.com/media/dagkaart/19.jpg ';
+        imagesOne[19] = ' https://www.helderinzicht.com/media/dagkaart/20.jpg ';
+        imagesOne[20] = ' https://www.helderinzicht.com/media/dagkaart/21.jpg ';
+        imagesOne[21] = ' https://www.helderinzicht.com/media/dagkaart/22.jpg ';
+        imagesOne[22] = ' https://www.helderinzicht.com/media/dagkaart/23.jpg ';
+        imagesOne[23] = ' https://www.helderinzicht.com/media/dagkaart/24.jpg ';
+        imagesOne[24] = ' https://www.helderinzicht.com/media/dagkaart/25.jpg ';
+        imagesOne[25] = ' https://www.helderinzicht.com/media/dagkaart/26.jpg ';
+        imagesOne[26] = ' https://www.helderinzicht.com/media/dagkaart/27.jpg ';
+        imagesOne[27] = ' https://www.helderinzicht.com/media/dagkaart/28.jpg ';
+        imagesOne[28] = ' https://www.helderinzicht.com/media/dagkaart/29.jpg ';
+        imagesOne[29] = ' https://www.helderinzicht.com/media/dagkaart/30.jpg ';
+        imagesOne[30] = ' https://www.helderinzicht.com/media/dagkaart/31.jpg ';
+        imagesOne[31] = ' https://www.helderinzicht.com/media/dagkaart/32.jpg ';
+        imagesOne[32] = ' https://www.helderinzicht.com/media/dagkaart/33.jpg ';
+        imagesOne[33] = ' https://www.helderinzicht.com/media/dagkaart/34.jpg ';
+        imagesOne[34] = ' https://www.helderinzicht.com/media/dagkaart/35.jpg ';
+        imagesOne[35] = ' https://www.helderinzicht.com/media/dagkaart/36.jpg ';
+        imagesOne[36] = ' https://www.helderinzicht.com/media/dagkaart/37.jpg ';
+        imagesOne[37] = ' https://www.helderinzicht.com/media/dagkaart/38.jpg ';
+        imagesOne[38] = ' https://www.helderinzicht.com/media/dagkaart/39.jpg ';
+        imagesOne[39] = ' https://www.helderinzicht.com/media/dagkaart/40.jpg ';
+        imagesOne[40] = ' https://www.helderinzicht.com/media/dagkaart/41.jpg ';
+        imagesOne[41] = ' https://www.helderinzicht.com/media/dagkaart/42.jpg ';
+        imagesOne[42] = ' https://www.helderinzicht.com/media/dagkaart/43.jpg ';
+        imagesOne[43] = ' https://www.helderinzicht.com/media/dagkaart/44.jpg ';
+        imagesOne[44] = ' https://www.helderinzicht.com/media/dagkaart/45.jpg ';
+        imagesOne[45] = ' https://www.helderinzicht.com/media/dagkaart/46.jpg ';
+        imagesOne[46] = ' https://www.helderinzicht.com/media/dagkaart/47.jpg ';
+        imagesOne[47] = ' https://www.helderinzicht.com/media/dagkaart/48.jpg ';
+        imagesOne[48] = ' https://www.helderinzicht.com/media/dagkaart/49.jpg ';
+        imagesOne[49] = ' https://www.helderinzicht.com/media/dagkaart/50.jpg ';
+        imagesOne[50] = ' https://www.helderinzicht.com/media/dagkaart/51.jpg ';
+        imagesOne[51] = ' https://www.helderinzicht.com/media/dagkaart/52.jpg ';
+        imagesOne[52] = ' https://www.helderinzicht.com/media/dagkaart/53.jpg ';
+        imagesOne[53] = ' https://www.helderinzicht.com/media/dagkaart/54.jpg ';
+        imagesOne[54] = ' https://www.helderinzicht.com/media/dagkaart/55.jpg ';
+        imagesOne[55] = ' https://www.helderinzicht.com/media/dagkaart/56.jpg ';
+        imagesOne[56] = ' https://www.helderinzicht.com/media/dagkaart/57.jpg ';
+        imagesOne[57] = ' https://www.helderinzicht.com/media/dagkaart/58.jpg ';
+        imagesOne[58] = ' https://www.helderinzicht.com/media/dagkaart/59.jpg ';
+        imagesOne[59] = ' https://www.helderinzicht.com/media/dagkaart/60.jpg ';
+        imagesOne[60] = ' https://www.helderinzicht.com/media/dagkaart/61.jpg ';
+        imagesOne[61] = ' https://www.helderinzicht.com/media/dagkaart/62.jpg ';
+        imagesOne[62] = ' https://www.helderinzicht.com/media/dagkaart/63.jpg ';
+        imagesOne[63] = ' https://www.helderinzicht.com/media/dagkaart/64.jpg ';
+        imagesOne[64] = ' https://www.helderinzicht.com/media/dagkaart/65.jpg ';
+        imagesOne[65] = ' https://www.helderinzicht.com/media/dagkaart/66.jpg ';
+        imagesOne[66] = ' https://www.helderinzicht.com/media/dagkaart/67.jpg ';
+        imagesOne[67] = ' https://www.helderinzicht.com/media/dagkaart/68.jpg ';
+        imagesOne[68] = ' https://www.helderinzicht.com/media/dagkaart/69.jpg ';
+        imagesOne[69] = ' https://www.helderinzicht.com/media/dagkaart/70.jpg ';
+        imagesOne[70] = ' https://www.helderinzicht.com/media/dagkaart/71.jpg ';
+        imagesOne[71] = ' https://www.helderinzicht.com/media/dagkaart/72.jpg ';
+        imagesOne[72] = ' https://www.helderinzicht.com/media/dagkaart/73.jpg ';
+        imagesOne[73] = ' https://www.helderinzicht.com/media/dagkaart/74.jpg ';
+        imagesOne[74] = ' https://www.helderinzicht.com/media/dagkaart/75.jpg ';
+        imagesOne[75] = ' https://www.helderinzicht.com/media/dagkaart/76.jpg ';
+        imagesOne[76] = ' https://www.helderinzicht.com/media/dagkaart/77.jpg ';
+        imagesOne[77] = ' https://www.helderinzicht.com/media/dagkaart/78.jpg ';
+        
+        random_image_tarot_dagkaart.onclick = function(){ change_image(); random_image_tarot_dagkaart.onclick=null;  }
+        function change_image(){ 
+          const randOne = Math.floor(Math.random() * imagesOne.length);
+          const imageOne = imagesOne[randOne];
+          const eleOne = document.getElementById ?   document.getElementById('random_image_tarot_dagkaart') : document.all['random_image_tarot_dagkaart'];
+          eleOne.src = imageOne;
+        }
+      </script>
+    </div>
+    <div class="lenormandDagkaart">
+      <h2>Hoe ziet jouw dag er uit?</h2>
+      <img src="https://www.helderinzicht.com/media/lenormanddagkaart/achter.gif" alt="Random Image" id="random_image" class="border" style="max-width: 90%; height: auto;">
+      <script language="javascript" type="text/javascript">
+        const imagesTwo = new Array(36)
+        imagesTwo[0] = ' https://www.helderinzicht.com/media/lenormanddagkaart/1.jpg ';
+        imagesTwo[1] = ' https://www.helderinzicht.com/media/lenormanddagkaart/2.jpg ';
+        imagesTwo[2] = ' https://www.helderinzicht.com/media/lenormanddagkaart/3.jpg ';
+        imagesTwo[3] = ' https://www.helderinzicht.com/media/lenormanddagkaart/4.jpg ';
+        imagesTwo[4] = ' https://www.helderinzicht.com/media/lenormanddagkaart/5.jpg ';
+        imagesTwo[5] = ' https://www.helderinzicht.com/media/lenormanddagkaart/6.jpg ';
+        imagesTwo[6] = ' https://www.helderinzicht.com/media/lenormanddagkaart/7.jpg ';
+        imagesTwo[7] = ' https://www.helderinzicht.com/media/lenormanddagkaart/8.jpg ';
+        imagesTwo[8] = ' https://www.helderinzicht.com/media/lenormanddagkaart/9.jpg ';
+        imagesTwo[9] = ' https://www.helderinzicht.com/media/lenormanddagkaart/10.jpg ';
+        imagesTwo[10] = ' https://www.helderinzicht.com/media/lenormanddagkaart/11.jpg ';
+        imagesTwo[11] = ' https://www.helderinzicht.com/media/lenormanddagkaart/12.jpg ';
+        imagesTwo[12] = ' https://www.helderinzicht.com/media/lenormanddagkaart/13.jpg ';
+        imagesTwo[13] = ' https://www.helderinzicht.com/media/lenormanddagkaart/14.jpg ';
+        imagesTwo[14] = ' https://www.helderinzicht.com/media/lenormanddagkaart/15.jpg ';
+        imagesTwo[15] = ' https://www.helderinzicht.com/media/lenormanddagkaart/16.jpg ';
+        imagesTwo[16] = ' https://www.helderinzicht.com/media/lenormanddagkaart/17.jpg ';
+        imagesTwo[17] = ' https://www.helderinzicht.com/media/lenormanddagkaart/18.jpg ';
+        imagesTwo[18] = ' https://www.helderinzicht.com/media/lenormanddagkaart/19.jpg ';
+        imagesTwo[19] = ' https://www.helderinzicht.com/media/lenormanddagkaart/20.jpg ';
+        imagesTwo[20] = ' https://www.helderinzicht.com/media/lenormanddagkaart/21.jpg ';
+        imagesTwo[21] = ' https://www.helderinzicht.com/media/lenormanddagkaart/22.jpg ';
+        imagesTwo[22] = ' https://www.helderinzicht.com/media/lenormanddagkaart/23.jpg ';
+        imagesTwo[23] = ' https://www.helderinzicht.com/media/lenormanddagkaart/24.jpg ';
+        imagesTwo[24] = ' https://www.helderinzicht.com/media/lenormanddagkaart/25.jpg ';
+        imagesTwo[25] = ' https://www.helderinzicht.com/media/lenormanddagkaart/26.jpg ';
+        imagesTwo[26] = ' https://www.helderinzicht.com/media/lenormanddagkaart/27.jpg ';
+        imagesTwo[27] = ' https://www.helderinzicht.com/media/lenormanddagkaart/28.jpg ';
+        imagesTwo[28] = ' https://www.helderinzicht.com/media/lenormanddagkaart/29.jpg ';
+        imagesTwo[29] = ' https://www.helderinzicht.com/media/lenormanddagkaart/30.jpg ';
+        imagesTwo[30] = ' https://www.helderinzicht.com/media/lenormanddagkaart/31.jpg ';
+        imagesTwo[31] = ' https://www.helderinzicht.com/media/lenormanddagkaart/32.jpg ';
+        imagesTwo[32] = ' https://www.helderinzicht.com/media/lenormanddagkaart/33.jpg ';
+        imagesTwo[33] = ' https://www.helderinzicht.com/media/lenormanddagkaart/34.jpg ';
+        imagesTwo[34] = ' https://www.helderinzicht.com/media/lenormanddagkaart/35.jpg ';
+        imagesTwo[35] = ' https://www.helderinzicht.com/media/lenormanddagkaart/36.jpg ';
+        
+        random_image.onclick = function(){ change_image(); random_image.onclick=null; }
+        function change_image(){ 
+        const rand = Math.floor(Math.random() * imagesTwo.length);
+        const image = imagesTwo[rand];
+        const ele = document.getElementById ?   document.getElementById('random_image') : document.all['random_image'];
+        ele.src = image;
+        }
+        </script>
+      </div>
+    <div class="dagkaartMarseille">
+      <img src="https://www.helderinzicht.com/media/marseille/achter.gif" alt="Random Ram" id="random_ram" class="border" style="max-width: 99%; height: auto;">
+      <script language="javascript" type="text/javascript">
+        const ramsOne = new Array(78)
+        ramsOne[0] = ' https://www.helderinzicht.com/media/marseille/0.jpg ';
+        ramsOne[1] = ' https://www.helderinzicht.com/media/marseille/1.jpg ';
+        ramsOne[2] = ' https://www.helderinzicht.com/media/marseille/2.jpg ';
+        ramsOne[3] = ' https://www.helderinzicht.com/media/marseille/3.jpg ';
+        ramsOne[4] = ' https://www.helderinzicht.com/media/marseille/4.jpg ';
+        ramsOne[5] = ' https://www.helderinzicht.com/media/marseille/5.jpg ';
+        ramsOne[6] = ' https://www.helderinzicht.com/media/marseille/6.jpg ';
+        ramsOne[7] = ' https://www.helderinzicht.com/media/marseille/7.jpg ';
+        ramsOne[8] = ' https://www.helderinzicht.com/media/marseille/8.jpg ';
+        ramsOne[9] = ' https://www.helderinzicht.com/media/marseille/9.jpg ';
+        ramsOne[10] = ' https://www.helderinzicht.com/media/marseille/10.jpg ';
+        ramsOne[11] = ' https://www.helderinzicht.com/media/marseille/11.jpg ';
+        ramsOne[12] = ' https://www.helderinzicht.com/media/marseille/12.jpg ';
+        ramsOne[13] = ' https://www.helderinzicht.com/media/marseille/13.jpg ';
+        ramsOne[14] = ' https://www.helderinzicht.com/media/marseille/14.jpg ';
+        ramsOne[15] = ' https://www.helderinzicht.com/media/marseille/15.jpg ';
+        ramsOne[16] = ' https://www.helderinzicht.com/media/marseille/16.jpg ';
+        ramsOne[17] = ' https://www.helderinzicht.com/media/marseille/17.jpg ';
+        ramsOne[18] = ' https://www.helderinzicht.com/media/marseille/18.jpg ';
+        ramsOne[19] = ' https://www.helderinzicht.com/media/marseille/19.jpg ';
+        ramsOne[20] = ' https://www.helderinzicht.com/media/marseille/20.jpg ';
+        ramsOne[21] = ' https://www.helderinzicht.com/media/marseille/21.jpg ';
+        ramsOne[22] = ' https://www.helderinzicht.com/media/marseille/sa.jpg ';
+        ramsOne[23] = ' https://www.helderinzicht.com/media/marseille/s2.jpg ';
+        ramsOne[24] = ' https://www.helderinzicht.com/media/marseille/s3.jpg ';
+        ramsOne[25] = ' https://www.helderinzicht.com/media/marseille/s4.jpg ';
+        ramsOne[26] = ' https://www.helderinzicht.com/media/marseille/s5.jpg ';
+        ramsOne[27] = ' https://www.helderinzicht.com/media/marseille/s6.jpg ';
+        ramsOne[28] = ' https://www.helderinzicht.com/media/marseille/s7.jpg ';
+        ramsOne[29] = ' https://www.helderinzicht.com/media/marseille/s8.jpg ';
+        ramsOne[30] = ' https://www.helderinzicht.com/media/marseille/s9.jpg ';
+        ramsOne[31] = ' https://www.helderinzicht.com/media/marseille/s10.jpg ';
+        ramsOne[32] = ' https://www.helderinzicht.com/media/marseille/ss.jpg ';
+        ramsOne[33] = ' https://www.helderinzicht.com/media/marseille/sr.jpg ';
+        ramsOne[34] = ' https://www.helderinzicht.com/media/marseille/sk.jpg ';
+        ramsOne[35] = ' https://www.helderinzicht.com/media/marseille/skn.jpg ';
+        ramsOne[36] = ' https://www.helderinzicht.com/media/marseille/ka.jpg ';
+        ramsOne[37] = ' https://www.helderinzicht.com/media/marseille/k2.jpg ';
+        ramsOne[38] = ' https://www.helderinzicht.com/media/marseille/k3.jpg ';
+        ramsOne[39] = ' https://www.helderinzicht.com/media/marseille/k4.jpg ';
+        ramsOne[40] = ' https://www.helderinzicht.com/media/marseille/k5.jpg ';
+        ramsOne[41] = ' https://www.helderinzicht.com/media/marseille/k6.jpg ';
+        ramsOne[42] = ' https://www.helderinzicht.com/media/marseille/k7.jpg ';
+        ramsOne[43] = ' https://www.helderinzicht.com/media/marseille/k8.jpg ';
+        ramsOne[44] = ' https://www.helderinzicht.com/media/marseille/k9.jpg ';
+        ramsOne[45] = ' https://www.helderinzicht.com/media/marseille/k10.jpg ';
+        ramsOne[46] = ' https://www.helderinzicht.com/media/marseille/ks.jpg ';
+        ramsOne[47] = ' https://www.helderinzicht.com/media/marseille/kr.jpg ';
+        ramsOne[48] = ' https://www.helderinzicht.com/media/marseille/kk.jpg ';
+        ramsOne[49] = ' https://www.helderinzicht.com/media/marseille/kkn.jpg ';
+        ramsOne[50] = ' https://www.helderinzicht.com/media/marseille/pa.jpg ';
+        ramsOne[51] = ' https://www.helderinzicht.com/media/marseille/p2.jpg ';
+        ramsOne[52] = ' https://www.helderinzicht.com/media/marseille/p3.jpg ';
+        ramsOne[53] = ' https://www.helderinzicht.com/media/marseille/p4.jpg ';
+        ramsOne[54] = ' https://www.helderinzicht.com/media/marseille/p5.jpg ';
+        ramsOne[55] = ' https://www.helderinzicht.com/media/marseille/p6.jpg ';
+        ramsOne[56] = ' https://www.helderinzicht.com/media/marseille/p7.jpg ';
+        ramsOne[57] = ' https://www.helderinzicht.com/media/marseille/p8.jpg ';
+        ramsOne[58] = ' https://www.helderinzicht.com/media/marseille/p9.jpg ';
+        ramsOne[59] = ' https://www.helderinzicht.com/media/marseille/p10.jpg ';
+        ramsOne[60] = ' https://www.helderinzicht.com/media/marseille/ps.jpg ';
+        ramsOne[61] = ' https://www.helderinzicht.com/media/marseille/pr.jpg ';
+        ramsOne[62] = ' https://www.helderinzicht.com/media/marseille/pk.jpg ';
+        ramsOne[63] = ' https://www.helderinzicht.com/media/marseille/pkn.jpg ';
+        ramsOne[64] = ' https://www.helderinzicht.com/media/marseille/za.jpg ';
+        ramsOne[65] = ' https://www.helderinzicht.com/media/marseille/z2.jpg ';
+        ramsOne[66] = ' https://www.helderinzicht.com/media/marseille/z3.jpg ';
+        ramsOne[67] = ' https://www.helderinzicht.com/media/marseille/z4.jpg ';
+        ramsOne[68] = ' https://www.helderinzicht.com/media/marseille/z5.jpg ';
+        ramsOne[69] = ' https://www.helderinzicht.com/media/marseille/z6.jpg ';
+        ramsOne[70] = ' https://www.helderinzicht.com/media/marseille/z7.jpg ';
+        ramsOne[71] = ' https://www.helderinzicht.com/media/marseille/z8.jpg ';
+        ramsOne[72] = ' https://www.helderinzicht.com/media/marseille/z9.jpg ';
+        ramsOne[73] = ' https://www.helderinzicht.com/media/marseille/z10.jpg ';
+        ramsOne[74] = ' https://www.helderinzicht.com/media/marseille/zs.jpg ';
+        ramsOne[75] = ' https://www.helderinzicht.com/media/marseille/zr.jpg ';
+        ramsOne[76] = ' https://www.helderinzicht.com/media/marseille/zk.jpg ';
+        ramsOne[77] = ' https://www.helderinzicht.com/media/marseille/zkn.jpg ';
+        
+        random_ram.onclick = function(){ change_ram(); random_ram.onclick=null; }
+        function change_ram(){ 
+        const rand = Math.floor(Math.random() * ramsOne.length);
+        const ram = ramsOne[rand];
+        const ele = document.getElementById ?   document.getElementById('random_ram') : document.all['random_ram'];
+        ele.src = ram;
+        }
+      </script>
+    </div>
+    <div class="mystiekeDeuren">
+      <h2>Welke boodschap verbergt zich achter deze mystieke deuren?</h2>
+      <img src="https://www.helderinzicht.com/media/deur1/achter.gif" alt="Random Image" id="random_image" class="border" style="max-width: 99%; height: auto;">
+      <script language="javascript" type="text/javascript">
+        const imagesThree = new Array(36)
+        imagesThree[0] = ' https://www.helderinzicht.com/media/deur1/1.jpg ';
+        imagesThree[1] = ' https://www.helderinzicht.com/media/deur1/2.jpg ';
+        imagesThree[2] = ' https://www.helderinzicht.com/media/deur1/3.jpg ';
+        imagesThree[3] = ' https://www.helderinzicht.com/media/deur1/4.jpg ';
+        imagesThree[4] = ' https://www.helderinzicht.com/media/deur1/5.jpg ';
+        imagesThree[5] = ' https://www.helderinzicht.com/media/deur1/6.jpg ';
+        imagesThree[6] = ' https://www.helderinzicht.com/media/deur1/7.jpg ';
+        imagesThree[7] = ' https://www.helderinzicht.com/media/deur1/8.jpg ';
+        imagesThree[8] = ' https://www.helderinzicht.com/media/deur1/9.jpg ';
+        imagesThree[9] = ' https://www.helderinzicht.com/media/deur1/10.jpg ';
+        imagesThree[10] = ' https://www.helderinzicht.com/media/deur1/11.jpg ';
+        imagesThree[11] = ' https://www.helderinzicht.com/media/deur1/12.jpg ';
+        imagesThree[12] = ' https://www.helderinzicht.com/media/deur1/13.jpg ';
+        imagesThree[13] = ' https://www.helderinzicht.com/media/deur1/14.jpg ';
+        imagesThree[14] = ' https://www.helderinzicht.com/media/deur1/15.jpg ';
+        imagesThree[15] = ' https://www.helderinzicht.com/media/deur1/16.jpg ';
+        imagesThree[16] = ' https://www.helderinzicht.com/media/deur1/17.jpg ';
+        imagesThree[17] = ' https://www.helderinzicht.com/media/deur1/18.jpg ';
+        imagesThree[18] = ' https://www.helderinzicht.com/media/deur1/19.jpg ';
+        imagesThree[19] = ' https://www.helderinzicht.com/media/deur1/20.jpg ';
+        imagesThree[20] = ' https://www.helderinzicht.com/media/deur1/21.jpg ';
+        imagesThree[21] = ' https://www.helderinzicht.com/media/deur1/22.jpg ';
+        imagesThree[22] = ' https://www.helderinzicht.com/media/deur1/23.jpg ';
+        imagesThree[23] = ' https://www.helderinzicht.com/media/deur1/24.jpg ';
+        imagesThree[24] = ' https://www.helderinzicht.com/media/deur1/25.jpg ';
+        imagesThree[25] = ' https://www.helderinzicht.com/media/deur1/26.jpg ';
+        imagesThree[26] = ' https://www.helderinzicht.com/media/deur1/27.jpg ';
+        imagesThree[27] = ' https://www.helderinzicht.com/media/deur1/28.jpg ';
+        imagesThree[28] = ' https://www.helderinzicht.com/media/deur1/29.jpg ';
+        imagesThree[29] = ' https://www.helderinzicht.com/media/deur1/30.jpg ';
+        imagesThree[30] = ' https://www.helderinzicht.com/media/deur1/31.jpg ';
+        imagesThree[31] = ' https://www.helderinzicht.com/media/deur1/32.jpg ';
+        imagesThree[32] = ' https://www.helderinzicht.com/media/deur1/33.jpg ';
+        imagesThree[33] = ' https://www.helderinzicht.com/media/deur1/34.jpg ';
+        imagesThree[34] = ' https://www.helderinzicht.com/media/deur1/35.jpg ';
+        imagesThree[35] = ' https://www.helderinzicht.com/media/deur1/36.jpg ';
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
+        random_image.onclick = function(){ change_image(); random_image.onclick=null; }
+        function change_image(){ 
+        const rand = Math.floor(Math.random() * imagesThree.length);
+        const image = imagesThree[rand];
+        const ele = document.getElementById ?   document.getElementById('random_image') : document.all['random_image'];
+        ele.src = image;
+        }
+      </script>
+    </div>
+      <div class="content">
+        <h2>Jouw planetaire Dagtrend:</h2>
+        <img src="https://www.helderinzicht.com/media/planeten/achter.gif" alt="Random Image" id="random_image" class="border" style="max-width: 75%; height: auto;">
+        <script language="javascript" type="text/javascript">
+          const imagesFour = new Array(42)
+          imagesFour[0] = ' https://www.helderinzicht.com/media/planeten/1.jpg ';
+          imagesFour[1] = ' https://www.helderinzicht.com/media/planeten/2.jpg ';
+          imagesFour[2] = ' https://www.helderinzicht.com/media/planeten/3.jpg ';
+          imagesFour[3] = ' https://www.helderinzicht.com/media/planeten/4.jpg ';
+          imagesFour[4] = ' https://www.helderinzicht.com/media/planeten/5.jpg ';
+          imagesFour[5] = ' https://www.helderinzicht.com/media/planeten/6.jpg ';
+          imagesFour[6] = ' https://www.helderinzicht.com/media/planeten/7.jpg ';
+          imagesFour[7] = ' https://www.helderinzicht.com/media/planeten/8.jpg ';
+          imagesFour[8] = ' https://www.helderinzicht.com/media/planeten/9.jpg ';
+          imagesFour[9] = ' https://www.helderinzicht.com/media/planeten/10.jpg ';
+          imagesFour[10] = ' https://www.helderinzicht.com/media/planeten/11.jpg ';
+          imagesFour[11] = ' https://www.helderinzicht.com/media/planeten/12.jpg ';
+          imagesFour[12] = ' https://www.helderinzicht.com/media/planeten/13.jpg ';
+          imagesFour[13] = ' https://www.helderinzicht.com/media/planeten/14.jpg ';
+          imagesFour[14] = ' https://www.helderinzicht.com/media/planeten/15.jpg ';
+          imagesFour[15] = ' https://www.helderinzicht.com/media/planeten/16.jpg ';
+          imagesFour[16] = ' https://www.helderinzicht.com/media/planeten/17.jpg ';
+          imagesFour[17] = ' https://www.helderinzicht.com/media/planeten/18.jpg ';
+          imagesFour[18] = ' https://www.helderinzicht.com/media/planeten/19.jpg ';
+          imagesFour[19] = ' https://www.helderinzicht.com/media/planeten/20.jpg ';
+          imagesFour[20] = ' https://www.helderinzicht.com/media/planeten/21.jpg ';
+          imagesFour[21] = ' https://www.helderinzicht.com/media/planeten/22.jpg ';
+          imagesFour[22] = ' https://www.helderinzicht.com/media/planeten/23.jpg ';
+          imagesFour[23] = ' https://www.helderinzicht.com/media/planeten/24.jpg ';
+          imagesFour[24] = ' https://www.helderinzicht.com/media/planeten/25.jpg ';
+          imagesFour[25] = ' https://www.helderinzicht.com/media/planeten/26.jpg ';
+          imagesFour[26] = ' https://www.helderinzicht.com/media/planeten/27.jpg ';
+          imagesFour[27] = ' https://www.helderinzicht.com/media/planeten/28.jpg ';
+          imagesFour[28] = ' https://www.helderinzicht.com/media/planeten/29.jpg ';
+          imagesFour[29] = ' https://www.helderinzicht.com/media/planeten/30.jpg ';
+          imagesFour[30] = ' https://www.helderinzicht.com/media/planeten/31.jpg ';
+          imagesFour[31] = ' https://www.helderinzicht.com/media/planeten/32.jpg ';
+          imagesFour[32] = ' https://www.helderinzicht.com/media/planeten/33.jpg ';
+          imagesFour[33] = ' https://www.helderinzicht.com/media/planeten/34.jpg ';
+          imagesFour[34] = ' https://www.helderinzicht.com/media/planeten/35.jpg ';
+          imagesFour[35] = ' https://www.helderinzicht.com/media/planeten/36.jpg ';
+          imagesFour[36] = ' https://www.helderinzicht.com/media/planeten/37.jpg ';
+          imagesFour[37] = ' https://www.helderinzicht.com/media/planeten/38.jpg ';
+          imagesFour[38] = ' https://www.helderinzicht.com/media/planeten/39.jpg ';
+          imagesFour[39] = ' https://www.helderinzicht.com/media/planeten/40.jpg ';
+          imagesFour[40] = ' https://www.helderinzicht.com/media/planeten/41.jpg ';
+          imagesFour[41] = ' https://www.helderinzicht.com/media/planeten/42.jpg ';
+          
+          random_image.onclick = function(){ change_image(); random_image.onclick=null;}
+          function change_image(){ 
+          const rand = Math.floor(Math.random() * imagesFour.length);
+          const image = imagesFour[rand];
+          const ele = document.getElementById ?   document.getElementById('random_image') : document.all['random_image'];
+          ele.src = image;
+          }
+        </script>
+      </div>
+      <div class="content">
+        <h2>Jouw Totemdier van de dag:</h2>
+        <img src="https://www.helderinzicht.com/media/totemdier/achter.jpg" alt="Random Image" id="random_image" class="border" style="max-width: 90%; height: auto;">
+        <script language="javascript" type="text/javascript">
+          const imagesFive = new Array(52)
+          imagesFive[0] = ' https://www.helderinzicht.com/media/totemdier/1.jpg ';
+          imagesFive[1] = ' https://www.helderinzicht.com/media/totemdier/2.jpg ';
+          imagesFive[2] = ' https://www.helderinzicht.com/media/totemdier/3.jpg ';
+          imagesFive[3] = ' https://www.helderinzicht.com/media/totemdier/4.jpg ';
+          imagesFive[4] = ' https://www.helderinzicht.com/media/totemdier/5.jpg ';
+          imagesFive[5] = ' https://www.helderinzicht.com/media/totemdier/6.jpg ';
+          imagesFive[6] = ' https://www.helderinzicht.com/media/totemdier/7.jpg ';
+          imagesFive[7] = ' https://www.helderinzicht.com/media/totemdier/8.jpg ';
+          imagesFive[8] = ' https://www.helderinzicht.com/media/totemdier/9.jpg ';
+          imagesFive[9] = ' https://www.helderinzicht.com/media/totemdier/10.jpg ';
+          imagesFive[10] = ' https://www.helderinzicht.com/media/totemdier/11.jpg ';
+          imagesFive[11] = ' https://www.helderinzicht.com/media/totemdier/12.jpg ';
+          imagesFive[12] = ' https://www.helderinzicht.com/media/totemdier/13.jpg ';
+          imagesFive[13] = ' https://www.helderinzicht.com/media/totemdier/14.jpg ';
+          imagesFive[14] = ' https://www.helderinzicht.com/media/totemdier/15.jpg ';
+          imagesFive[15] = ' https://www.helderinzicht.com/media/totemdier/16.jpg ';
+          imagesFive[16] = ' https://www.helderinzicht.com/media/totemdier/17.jpg ';
+          imagesFive[17] = ' https://www.helderinzicht.com/media/totemdier/18.jpg ';
+          imagesFive[18] = ' https://www.helderinzicht.com/media/totemdier/19.jpg ';
+          imagesFive[19] = ' https://www.helderinzicht.com/media/totemdier/20.jpg ';
+          imagesFive[20] = ' https://www.helderinzicht.com/media/totemdier/21.jpg ';
+          imagesFive[21] = ' https://www.helderinzicht.com/media/totemdier/22.jpg ';
+          imagesFive[22] = ' https://www.helderinzicht.com/media/totemdier/23.jpg ';
+          imagesFive[23] = ' https://www.helderinzicht.com/media/totemdier/24.jpg ';
+          imagesFive[24] = ' https://www.helderinzicht.com/media/totemdier/25.jpg ';
+          imagesFive[25] = ' https://www.helderinzicht.com/media/totemdier/26.jpg ';
+          imagesFive[26] = ' https://www.helderinzicht.com/media/totemdier/27.jpg ';
+          imagesFive[27] = ' https://www.helderinzicht.com/media/totemdier/28.jpg ';
+          imagesFive[28] = ' https://www.helderinzicht.com/media/totemdier/29.jpg ';
+          imagesFive[29] = ' https://www.helderinzicht.com/media/totemdier/30.jpg ';
+          imagesFive[30] = ' https://www.helderinzicht.com/media/totemdier/31.jpg ';
+          imagesFive[31] = ' https://www.helderinzicht.com/media/totemdier/32.jpg ';
+          imagesFive[32] = ' https://www.helderinzicht.com/media/totemdier/33.jpg ';
+          imagesFive[33] = ' https://www.helderinzicht.com/media/totemdier/34.jpg ';
+          imagesFive[34] = ' https://www.helderinzicht.com/media/totemdier/35.jpg ';
+          imagesFive[35] = ' https://www.helderinzicht.com/media/totemdier/36.jpg ';
+          imagesFive[36] = ' https://www.helderinzicht.com/media/totemdier/37.jpg ';
+          imagesFive[37] = ' https://www.helderinzicht.com/media/totemdier/38.jpg ';
+          imagesFive[38] = ' https://www.helderinzicht.com/media/totemdier/39.jpg ';
+          imagesFive[39] = ' https://www.helderinzicht.com/media/totemdier/40.jpg ';
+          imagesFive[40] = ' https://www.helderinzicht.com/media/totemdier/41.jpg ';
+          imagesFive[41] = ' https://www.helderinzicht.com/media/totemdier/42.jpg ';
+          imagesFive[42] = ' https://www.helderinzicht.com/media/totemdier/43.jpg ';
+          imagesFive[43] = ' https://www.helderinzicht.com/media/totemdier/44.jpg ';
+          imagesFive[44] = ' https://www.helderinzicht.com/media/totemdier/45.jpg ';
+          imagesFive[45] = ' https://www.helderinzicht.com/media/totemdier/46.jpg ';
+          imagesFive[46] = ' https://www.helderinzicht.com/media/totemdier/47.jpg ';
+          imagesFive[47] = ' https://www.helderinzicht.com/media/totemdier/48.jpg ';
+          imagesFive[48] = ' https://www.helderinzicht.com/media/totemdier/49.jpg ';
+          imagesFive[49] = ' https://www.helderinzicht.com/media/totemdier/50.jpg ';
+          imagesFive[50] = ' https://www.helderinzicht.com/media/totemdier/51.jpg ';
+          imagesFive[51] = ' https://www.helderinzicht.com/media/totemdier/52.jpg ';
+          
+          random_image.onclick = function(){ change_image(); random_image.onclick=null;}
+          function change_image(){ 
+          const rand = Math.floor(Math.random() * imagesFive.length);
+          const image = imagesFive[rand];
+          const ele = document.getElementById ?   document.getElementById('random_image') : document.all['random_image'];
+          ele.src = image;
+          }
+        </script>
+      </div>
+      <div class="content">
+        <h2>Aquarel Tarot Dagkaart - Hoe is je dag?</h2>
+        <img src="https://www.helderinzicht.com/media/tarota/achteraq.gif" alt="Random Ram" id="random_ram" class="border" style="max-width: 99%; height: auto;">
+        <script language="javascript" type="text/javascript">
+          const ramsTwo = new Array(78)
+          ramsTwo[0] = ' https://www.helderinzicht.com/media/tarota/0.jpg ';
+          ramsTwo[1] = ' https://www.helderinzicht.com/media/tarota/1.jpg ';
+          ramsTwo[2] = ' https://www.helderinzicht.com/media/tarota/2.jpg ';
+          ramsTwo[3] = ' https://www.helderinzicht.com/media/tarota/3.jpg ';
+          ramsTwo[4] = ' https://www.helderinzicht.com/media/tarota/4.jpg ';
+          ramsTwo[5] = ' https://www.helderinzicht.com/media/tarota/5.jpg ';
+          ramsTwo[6] = ' https://www.helderinzicht.com/media/tarota/6.jpg ';
+          ramsTwo[7] = ' https://www.helderinzicht.com/media/tarota/7.jpg ';
+          ramsTwo[8] = ' https://www.helderinzicht.com/media/tarota/8.jpg ';
+          ramsTwo[9] = ' https://www.helderinzicht.com/media/tarota/9.jpg ';
+          ramsTwo[10] = ' https://www.helderinzicht.com/media/tarota/10.jpg ';
+          ramsTwo[11] = ' https://www.helderinzicht.com/media/tarota/11.jpg ';
+          ramsTwo[12] = ' https://www.helderinzicht.com/media/tarota/12.jpg ';
+          ramsTwo[13] = ' https://www.helderinzicht.com/media/tarota/13.jpg ';
+          ramsTwo[14] = ' https://www.helderinzicht.com/media/tarota/14.jpg ';
+          ramsTwo[15] = ' https://www.helderinzicht.com/media/tarota/15.jpg ';
+          ramsTwo[16] = ' https://www.helderinzicht.com/media/tarota/16.jpg ';
+          ramsTwo[17] = ' https://www.helderinzicht.com/media/tarota/17.jpg ';
+          ramsTwo[18] = ' https://www.helderinzicht.com/media/tarota/18.jpg ';
+          ramsTwo[19] = ' https://www.helderinzicht.com/media/tarota/19.jpg ';
+          ramsTwo[20] = ' https://www.helderinzicht.com/media/tarota/20.jpg ';
+          ramsTwo[21] = ' https://www.helderinzicht.com/media/tarota/21.jpg ';
+          ramsTwo[22] = ' https://www.helderinzicht.com/media/tarota/sa.jpg ';
+          ramsTwo[23] = ' https://www.helderinzicht.com/media/tarota/s2.jpg ';
+          ramsTwo[24] = ' https://www.helderinzicht.com/media/tarota/s3.jpg ';
+          ramsTwo[25] = ' https://www.helderinzicht.com/media/tarota/s4.jpg ';
+          ramsTwo[26] = ' https://www.helderinzicht.com/media/tarota/s5.jpg ';
+          ramsTwo[27] = ' https://www.helderinzicht.com/media/tarota/s6.jpg ';
+          ramsTwo[28] = ' https://www.helderinzicht.com/media/tarota/s7.jpg ';
+          ramsTwo[29] = ' https://www.helderinzicht.com/media/tarota/s8.jpg ';
+          ramsTwo[30] = ' https://www.helderinzicht.com/media/tarota/s9.jpg ';
+          ramsTwo[31] = ' https://www.helderinzicht.com/media/tarota/s10.jpg ';
+          ramsTwo[32] = ' https://www.helderinzicht.com/media/tarota/ss.jpg ';
+          ramsTwo[33] = ' https://www.helderinzicht.com/media/tarota/sr.jpg ';
+          ramsTwo[34] = ' https://www.helderinzicht.com/media/tarota/sk.jpg ';
+          ramsTwo[35] = ' https://www.helderinzicht.com/media/tarota/skn.jpg ';
+          ramsTwo[36] = ' https://www.helderinzicht.com/media/tarota/ka.jpg ';
+          ramsTwo[37] = ' https://www.helderinzicht.com/media/tarota/k2.jpg ';
+          ramsTwo[38] = ' https://www.helderinzicht.com/media/tarota/k3.jpg ';
+          ramsTwo[39] = ' https://www.helderinzicht.com/media/tarota/k4.jpg ';
+          ramsTwo[40] = ' https://www.helderinzicht.com/media/tarota/k5.jpg ';
+          ramsTwo[41] = ' https://www.helderinzicht.com/media/tarota/k6.jpg ';
+          ramsTwo[42] = ' https://www.helderinzicht.com/media/tarota/k7.jpg ';
+          ramsTwo[43] = ' https://www.helderinzicht.com/media/tarota/k8.jpg ';
+          ramsTwo[44] = ' https://www.helderinzicht.com/media/tarota/k9.jpg ';
+          ramsTwo[45] = ' https://www.helderinzicht.com/media/tarota/k10.jpg ';
+          ramsTwo[46] = ' https://www.helderinzicht.com/media/tarota/ks.jpg ';
+          ramsTwo[47] = ' https://www.helderinzicht.com/media/tarota/kr.jpg ';
+          ramsTwo[48] = ' https://www.helderinzicht.com/media/tarota/kk.jpg ';
+          ramsTwo[49] = ' https://www.helderinzicht.com/media/tarota/kkn.jpg ';
+          ramsTwo[50] = ' https://www.helderinzicht.com/media/tarota/pa.jpg ';
+          ramsTwo[51] = ' https://www.helderinzicht.com/media/tarota/p2.jpg ';
+          ramsTwo[52] = ' https://www.helderinzicht.com/media/tarota/p3.jpg ';
+          ramsTwo[53] = ' https://www.helderinzicht.com/media/tarota/p4.jpg ';
+          ramsTwo[54] = ' https://www.helderinzicht.com/media/tarota/p5.jpg ';
+          ramsTwo[55] = ' https://www.helderinzicht.com/media/tarota/p6.jpg ';
+          ramsTwo[56] = ' https://www.helderinzicht.com/media/tarota/p7.jpg ';
+          ramsTwo[57] = ' https://www.helderinzicht.com/media/tarota/p8.jpg ';
+          ramsTwo[58] = ' https://www.helderinzicht.com/media/tarota/p9.jpg ';
+          ramsTwo[59] = ' https://www.helderinzicht.com/media/tarota/p10.jpg ';
+          ramsTwo[60] = ' https://www.helderinzicht.com/media/tarota/ps.jpg ';
+          ramsTwo[61] = ' https://www.helderinzicht.com/media/tarota/pr.jpg ';
+          ramsTwo[62] = ' https://www.helderinzicht.com/media/tarota/pk.jpg ';
+          ramsTwo[63] = ' https://www.helderinzicht.com/media/tarota/pkn.jpg ';
+          ramsTwo[64] = ' https://www.helderinzicht.com/media/tarota/za.jpg ';
+          ramsTwo[65] = ' https://www.helderinzicht.com/media/tarota/z2.jpg ';
+          ramsTwo[66] = ' https://www.helderinzicht.com/media/tarota/z3.jpg ';
+          ramsTwo[67] = ' https://www.helderinzicht.com/media/tarota/z4.jpg ';
+          ramsTwo[68] = ' https://www.helderinzicht.com/media/tarota/z5.jpg ';
+          ramsTwo[69] = ' https://www.helderinzicht.com/media/tarota/z6.jpg ';
+          ramsTwo[70] = ' https://www.helderinzicht.com/media/tarota/z7.jpg ';
+          ramsTwo[71] = ' https://www.helderinzicht.com/media/tarota/z8.jpg ';
+          ramsTwo[72] = ' https://www.helderinzicht.com/media/tarota/z9.jpg ';
+          ramsTwo[73] = ' https://www.helderinzicht.com/media/tarota/z10.jpg ';
+          ramsTwo[74] = ' https://www.helderinzicht.com/media/tarota/zs.jpg ';
+          ramsTwo[75] = ' https://www.helderinzicht.com/media/tarota/zr.jpg ';
+          ramsTwo[76] = ' https://www.helderinzicht.com/media/tarota/zk.jpg ';
+          ramsTwo[77] = ' https://www.helderinzicht.com/media/tarota/zkn.jpg ';
+          
+          random_ram.onclick = function(){ change_ram(); random_ram.onclick=null; }
+          function change_ram(){ 
+          const rand = Math.floor(Math.random() * ramsTwo.length);
+          const ram = ramsTwo[rand];
+          const ele = document.getElementById ?   document.getElementById('random_ram') : document.all['random_ram'];
+          ele.src = ram;
+          }
+        </script>
+      </div>
     <title>React App</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+    #app
   </body>
 </html>
