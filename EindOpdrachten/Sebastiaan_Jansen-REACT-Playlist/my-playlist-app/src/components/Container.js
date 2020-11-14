@@ -1,14 +1,22 @@
-import React from "react"
+import React, { Component } from "react"
 import Form from "./Form"
 import SongList from "./SongList"
 
-function Container() {
-    return (
-        <main className="container">
-            <Form />
-            <SongList />
-        </main>
-    )
+class Container extends Component {
+    constructor() {
+        super()
+        this.state = {
+            songs: []
+        }
+    }
+    render(){
+        return (
+            <main className="container">
+                <Form />
+                <SongList songs/>
+            </main>
+        )
+    }
 }
 
 export default Container

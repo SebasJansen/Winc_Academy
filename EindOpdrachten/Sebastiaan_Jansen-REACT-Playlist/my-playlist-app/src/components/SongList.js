@@ -1,12 +1,12 @@
 import React, { Component } from "react"
 
 class SongList extends Component {
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
             error: null,
             loading: false,
-            songs: []
+            songs: [props]
         }
     }
     componentDidMount() {
