@@ -77,11 +77,15 @@ input[type=submit]:hover {
   margin-right: 4%;
 }
 #songsTable tr:nth-child(even){background-color: #0077ff;}
-#songsTable tr:hover {background-color: rgb(0, 180, 180);}
+#songsTable tr:hover {background-color: rgb(180, 60, 60);}
 #songsTable th {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: center;
   background-color: #002fff;
   color: white;
+}
+.btnDelete {
+  width: 20px;
+  height: 20px;
 }

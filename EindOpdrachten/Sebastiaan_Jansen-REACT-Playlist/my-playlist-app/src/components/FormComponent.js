@@ -1,35 +1,32 @@
 import React, { Component } from "react"
-import SongList from "./SongList"
 
 class FormComponent extends Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super();
         this.state = {
             title: "",
             artist: "",
             genre: "",
             rating: 0
         }
-        this.handleChange = this.handleChange.bind(this)
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
     
     handleChange = (event) => {
         this.setState({[event.target.name]: event.target.value});
     }
-    
     handleSubmit = (event) => {
-        fetch('https://jsonbox.io/box_efb6f509b9be86982174', {
-            method: 'POST',
-            body: JSON.stringify(this.state),
-            headers: {
-                "Content-Type": "application/json"
-            },
-        }).then(function(response) {
-            console.log(response)
-            return response.json()
+        this.props.addSong(this.state)
+        this.setState({
+            title: "",
+            artist: "",
+            genre: "",
+            rating: 0
         })
         event.preventDefault()
     }
+    
     render() {
         return (
             <section className="songForm">
@@ -69,7 +66,7 @@ class FormComponent extends Component {
                         id="rating"
                         name="rating"
                         value={this.state.rating}
-                        placeholder="Rating between 1 and 5"
+                        placeholder="Rating"
                         onChange={this.handleChange}
                         min="1" max="5"
                     />

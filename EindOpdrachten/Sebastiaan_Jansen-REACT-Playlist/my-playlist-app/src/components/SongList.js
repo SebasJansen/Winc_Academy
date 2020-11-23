@@ -1,38 +1,17 @@
 import React, { Component } from "react"
 
 class SongList extends Component {
-    constructor(props) {
-        super(props)
-        this.state = {
-            error: null,
-            loading: false,
-            songs: [props]
-        }
+    constructor() {
+        super();
+        this.handleDelete = this.handleDelete.bind(this);
     }
-    componentDidMount() {
-        this.setState({loading: true})
-        fetch("https://jsonbox.io/box_efb6f509b9be86982174")
-            .then(response => response.json())
-            .then(data => {
-                this.setState({
-                    loading: false,
-                    songs: data
-                })
-                console.log(this.state.songs);
-            },
-            (error) => {
-                this.setState({
-                    isLoaded: true,
-                    error
-                })
-            },
-        )
+    handleDelete = (id) => {
+        this.props.deleteSong(id)
     }
     render() {
-        const {error, loading, songs} = this.state;
-        if(error){
+        if(this.props.error){
             return <div>Error in loading</div>
-        }else if (loading) {
+        }else if (this.props.loading) {
             return <div>Loading ...</div>
         }else{
             return (
@@ -44,13 +23,15 @@ class SongList extends Component {
                                 <th>Artist</th>
                                 <th>Genre</th>
                                 <th>Rating</th>
+                                <th>Delete?</th>
                             </tr>
-                            {songs.map(song => (
-                                <tr key={song._id} className="tableItems">
+                            {this.props.songs.map((song, index) => (
+                                <tr key={index} className="tableItems">
                                     <td>{song.title}</td>
                                     <td>{song.artist}</td>
                                     <td>{song.genre}</td>
                                     <td>{song.rating}</td>
+                                    <td><button className="btnDelete" onClick={() => this.handleDelete(song._id)}></button></td>
                                 </tr>
                             ))
                             }
