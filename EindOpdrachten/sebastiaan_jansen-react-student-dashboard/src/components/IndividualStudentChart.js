@@ -9,9 +9,10 @@ class IndividualStudentChart extends Component {
             <VictoryChart 
                 domain={{ x: [0, 56], y: [0, 5]}} 
                 domainPadding={10} 
+                padding={{ top: 50, bottom: 210, right: 10, left: 50}}
                 theme={axisTheme} 
                 width={1200}
-                height={300}
+                height={500}
                 containerComponent={
                     <VictoryZoomContainer
                         allowZoom={false}
