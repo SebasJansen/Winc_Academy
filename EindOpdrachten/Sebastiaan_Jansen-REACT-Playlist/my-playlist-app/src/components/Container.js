@@ -39,6 +39,7 @@ class Container extends Component {
             },
         }).then(function(response) {
             console.log(`The response : ${response}`)
+            console.log(response);
             return response.json()
         })
         this.setState((prevState) => {
