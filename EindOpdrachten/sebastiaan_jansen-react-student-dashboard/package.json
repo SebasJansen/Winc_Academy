@@ -6,9 +6,17 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.1.2",
     "@testing-library/user-event": "^12.2.2",
+    "expo-constants": "^9.2.0",
+    "expo-module-scripts": "^1.2.0",
     "react": "^17.0.1",
+    "react-art": "^17.0.1",
     "react-dom": "^17.0.1",
-    "react-scripts": "4.0.0",
+    "react-native": "^0.63.4",
+    "react-native-web": "^0.14.9",
+    "react-router-dom": "^5.2.0",
+    "react-router-native": "^5.2.0",
+    "react-scripts": "^4.0.0",
+    "victory": "^35.4.0",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
