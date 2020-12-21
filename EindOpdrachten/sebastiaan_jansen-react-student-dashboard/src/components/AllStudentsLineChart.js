@@ -1,12 +1,11 @@
 import React from "react";
 import { VictoryLine, VictoryChart, VictoryGroup, VictoryLegend, VictoryLabel, createContainer, VictoryTooltip} from 'victory';
 import axisTheme from "./materialTheme";
-const studentData = require('./studentData');
 const VictoryZoomVoronoiContainer = createContainer("zoom", "voronoi");
 
 
-function AllStudentsLineChart() {
-    const newStudentData = studentData.student;
+function AllStudentsLineChart(props) {
+    const newStudentData = props.studentData;
     const assignmentData = newStudentData.map(x => x.assignments)
     const flattenArray = assignmentData.flat()
     const uniqueAssignmentNames = assignmentData[0].map(x => x.name)

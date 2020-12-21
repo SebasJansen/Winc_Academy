@@ -7,65 +7,27 @@ import {
 } from "react-router-dom";
 import Student from "./Student";
 
-function Students() {
+
+function Students(props) {
     let match = useRouteMatch();
+    const studentData = props.studentData;
     return (
+        
         <div className="studentDiv">
             <ul className="studentNav">
-                <li>
-                    <Link to={`${match.url}/evelyn`}>
-                    Evelyn
-                    </Link>
-                </li>
-                <li>
-                    <Link to={`${match.url}/aranka`}>
-                    Aranka
-                    </Link>
-                </li>
-                <li>
-                    <Link to={`${match.url}/floris`}>
-                    Floris
-                    </Link>
-                </li>
-                <li>
-                    <Link to={`${match.url}/hector`}>
-                    Hector
-                    </Link>
-                </li>
-                <li>
-                    <Link to={`${match.url}/martina`}>
-                    Martina
-                    </Link>
-                </li>
-                <li>
-                    <Link to={`${match.url}/maurits`}>
-                    Maurits
-                    </Link>
-                </li>
-                <li>
-                    <Link to={`${match.url}/rahima`}>
-                    Rahima
-                    </Link>
-                </li>
-                <li>
-                    <Link to={`${match.url}/sandra`}>
-                    Sandra
-                    </Link>
-                </li>
-                <li>
-                    <Link to={`${match.url}/wietske`}>
-                    Wietske
-                    </Link>
-                </li>
-                <li>
-                    <Link to={`${match.url}/storm`}>
-                    Storm
-                    </Link>
-                </li>
+                {studentData.map((student, index) => {
+                    return(
+                        <li key={index}>
+                            <Link to={`${match.url}/${index}`}>
+                                {student.name}
+                            </Link>
+                        </li>
+                    )
+                })}
             </ul>
             <Switch>
                 <Route path={`${match.path}/:studentId`}>
-                    <Student />
+                    <Student studentData={studentData}/>
                 </Route>
                 <Route path={match.path}>
                     <div>Please select a student.</div>

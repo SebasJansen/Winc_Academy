@@ -1,24 +1,24 @@
 import React from "react";
 import { VictoryBar, VictoryChart, VictoryGroup, VictoryZoomContainer, VictoryLegend, VictoryLabel} from 'victory';
 import axisTheme from "./materialTheme";
-const studentData = require('./studentData');
 
 
-function AllStudentsChart() {
-    const newStudentData = studentData.student;
+function AllStudentsChart(props) {
+    const newStudentData = props.studentData;
     const assignmentData = newStudentData.map(x => x.assignments)
     const flattenArray = assignmentData.flat()
     const uniqueAssignmentNames = assignmentData[0].map(x => x.name)
-    let sortedAssignments = [];
-    uniqueAssignmentNames.forEach(assignment => {
-        let groupedAssignments = flattenArray.filter(x => x.name === assignment)
-        sortedAssignments.push(groupedAssignments)
+    const sortedAssignments = uniqueAssignmentNames.map(assignment => {
+        return(flattenArray.filter(x => x.name === assignment))
     });
-    let assignmentsTotal = [];
-    sortedAssignments.forEach(assignmentSet => {
-        const reducer = assignmentSet.reduce((total, current) => {
-            return { name: current.name, difficultyRating : total.difficultyRating + current.difficultyRating, funRating : total.funRating + current.funRating} });
-        assignmentsTotal.push(reducer)
+    const assignmentsTotal = sortedAssignments.map(assignmentSet => {
+        return(assignmentSet.reduce((total, current) => {
+            return {    
+                name: current.name, 
+                difficultyRating : total.difficultyRating + current.difficultyRating, 
+                funRating : total.funRating + current.funRating
+            }
+        }))
     })
     const assignmentsAverage = assignmentsTotal.map((current) => {
         return { name: current.name, difficultyRating : (current.difficultyRating / newStudentData.length), funRating : (current.funRating / newStudentData.length)} });

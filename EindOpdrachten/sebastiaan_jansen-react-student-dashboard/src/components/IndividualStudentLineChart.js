@@ -6,7 +6,7 @@ const VictoryZoomVoronoiContainer = createContainer("zoom", "voronoi");
 
 class IndividualStudentLineChart extends Component {
     render(){
-        const individualStudentData = studentData.student[this.props.id];
+        const individualStudentData = studentData[this.props.id];
         const individualAssignmentData = individualStudentData.assignments;
         let tempDifficultyTotal = 0;
         let tempFunTotal = 0;
@@ -34,19 +34,19 @@ class IndividualStudentLineChart extends Component {
                         labelComponent={<VictoryTooltip/>}
                     />
                 }>
-                <VictoryLabel   text={"Student average difficulty & fun from " + studentData.student[this.props.id].name} x={375} y={30}
+                <VictoryLabel   text={"Student average difficulty & fun from " + studentData[this.props.id].name} x={375} y={30}
                                 textAnchor="middle" 
                                 style={[{fontSize: 25}]}/>
                 <VictoryGroup offset={5} colorScale={"qualitative"}>
                     <VictoryLine
                         interpolation="natural"
-                        data={studentData.student[this.props.id].assignments}
+                        data={studentData[this.props.id].assignments}
                         x="name"
                         y="averageDifficulty"
                     />
                     <VictoryLine
                         interpolation="natural"
-                        data={studentData.student[this.props.id].assignments}
+                        data={studentData[this.props.id].assignments}
                         x="name"
                         y="averageFun"
                     />

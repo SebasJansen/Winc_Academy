@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { VictoryBar, VictoryChart, VictoryGroup, VictoryZoomContainer, VictoryLegend, VictoryLabel} from 'victory';
 import axisTheme from "./materialTheme";
-const studentData = require('./studentData.json');
+// const studentData = require('./studentData.json');
 
 class IndividualStudentChart extends Component {
     render(){
@@ -20,17 +20,17 @@ class IndividualStudentChart extends Component {
                         zoomDimension="x"
                     />
                 }>
-                <VictoryLabel   text={"Studentdata from " + studentData.student[this.props.id].name} x={280} y={30}
+                <VictoryLabel   text={"Studentdata from " + this.props.studentData[this.props.id].name} x={280} y={30}
                                 textAnchor="middle" 
                                 style={[{fontSize: 25}]}/>
                 <VictoryGroup offset={5} colorScale={"qualitative"}>
                     <VictoryBar
-                        data={studentData.student[this.props.id].assignments}
+                        data={this.props.studentData[this.props.id].assignments}
                         x="name"
                         y="difficultyRating"
                     />
                     <VictoryBar
-                        data={studentData.student[this.props.id].assignments}
+                        data={this.props.studentData[this.props.id].assignments}
                         x="name"
                         y="funRating"
                     />

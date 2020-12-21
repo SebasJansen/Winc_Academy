@@ -7,6 +7,7 @@ import {
 } from "react-router-dom";
 import Students from "./Students"
 import Home from "./Home"
+const studentData = require('./studentData.json');
 
 function NavMenu() {
     return (
@@ -23,10 +24,10 @@ function NavMenu() {
                     
                     <Switch>
                         <Route path="/students">
-                            <Students />
+                            <Students studentData={studentData}/>
                         </Route>
                         <Route path="/">
-                            <Home />
+                            <Home studentData={studentData}/>
                         </Route>
                     </Switch>
                 </div>

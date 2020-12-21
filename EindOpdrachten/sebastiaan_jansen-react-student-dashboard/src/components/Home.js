@@ -2,11 +2,11 @@ import React from "react";
 import AllStudentsChart from "./AllStudentsChart";
 import AllStudentsLineChart from "./AllStudentsLineChart";
 
-function Home() {
+function Home(props) {
     return (
         <div className="chartsContainer">
-            <AllStudentsChart/>
-            <AllStudentsLineChart/>
+            <AllStudentsChart studentData={props.studentData}/>
+            <AllStudentsLineChart studentData={props.studentData}/>
         </div>
     )
 }
