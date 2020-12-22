@@ -5,10 +5,12 @@ __human_name__ = 'strings'
 # Add your code after this line
 scorer_one = 'Gullit'
 scorer_two = 'Van Basten'
-goal_1 = 32
-goal_2 = 54
-scorers = scorer_one + str(goal_1), scorer_two + str(goal_2)
-report = f'{scorer_one} scored in the {goal_1}th minute\n{scorer_two} scored in the {goal_2}th minute'
+goal_0 = 32
+goal_1 = 54
+#scorers = scorer_one + str(f' {goal_0}'), scorer_two + str(f' {goal_1}')
+scorers = scorer_one + " " + str(goal_0) + "," + scorer_two + " " + str(goal_1)
+print (scorers)
+report = f'{scorer_one} scored in the {goal_0}th minute\n{scorer_two} scored in the {goal_1}th minute'
 print (report)
 player = 'Rinat Dasayev'
 first_name = player[:player.find(' ')]
