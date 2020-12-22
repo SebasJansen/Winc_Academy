@@ -15,9 +15,10 @@ print (report)
 player = 'Rinat Dasayev'
 first_name = player[:player.find(' ')]
 print (first_name)
-last_name_len = player[(player.find(' ')+1):len(player)]
+last_name_len = len(player[(player.find(' ')+1):len(player)])
 print (last_name_len)
-name_short = f'{first_name[:1]}. {last_name_len}'
+last_name = player[(player.find(' ')+1):len(player)]
+name_short = f'{first_name[:1]}. {last_name}'
 print (name_short)
 chant = f'{first_name}! '*len(first_name)
 chant = chant[:-1]
