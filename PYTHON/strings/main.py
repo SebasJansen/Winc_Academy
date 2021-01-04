@@ -3,8 +3,8 @@ __winc_id__ = '71dd124b4a6e4d268f5973db521394ee'
 __human_name__ = 'strings'
 
 # Add your code after this line
-scorer_one = 'Gullit'
-scorer_two = 'Van Basten'
+scorer_one = 'Ruud Gullit'
+scorer_two = 'Marco van Basten'
 goal_0 = 32
 goal_1 = 54
 #scorers = scorer_one + str(f' {goal_0}'), scorer_two + str(f' {goal_1}')
