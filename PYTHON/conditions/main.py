@@ -25,7 +25,6 @@ def farm_action(factors):
 
 def take_cows_to_cowshed(factors):
     if factors.cows_location == 'pasture' and factors.time_of_day == 'night' or factors.cows_location == 'pasture' and factors.weather == 'rainy' or factors.cows_location == 'pasture' and factors.cow_milking_status == True:
-        #print('Take cows to cowshed')
         factors.actions_list += 'Take cows to cowshed\n'
         factors.cows_location = 'cowshed'
         factors.actions_count += 1
@@ -33,7 +32,6 @@ def take_cows_to_cowshed(factors):
     else: return
 def take_cows_to_pasture(factors):
     if factors.cows_location == 'cowshed' and factors.cow_milking_status == False:
-        #print('Take cows back to pasture')
         factors.actions_list += 'Take cows back to pasture\n'
         factors.cows_location = 'pasture'
         factors.actions_count += 1
@@ -42,7 +40,6 @@ def take_cows_to_pasture(factors):
 def milk_cows(factors):
     while factors.cow_milking_status == True:
         if factors.cows_location == 'cowshed':
-            #print('Milk the cows')
             factors.actions_list += 'Milk the cows\n'
             factors.cow_milking_status = False
             factors.actions_count += 1
@@ -51,7 +48,6 @@ def milk_cows(factors):
 def fertilize_pasture(factors):
     while factors.slurry_tank == True and factors.weather != 'sunny' and factors.weather != 'windy':
         if factors.cows_location == 'cowshed':
-            #print('Fertilize pasture')
             factors.actions_list += 'Fertilize pasture\n'
             factors.slurry_tank = False
             factors.actions_count += 1
@@ -60,14 +56,12 @@ def fertilize_pasture(factors):
 def mow_grass(factors):
     while factors.season == 'spring' and factors.weather == 'sunny' and factors.grass_status == True:
         if factors.cows_location == 'cowshed':
-            #print('Mow grass')
             factors.actions_list += 'Mow grass\n'
             factors.grass_status = False
             factors.actions_count += 1
         else: take_cows_to_cowshed(factors)
     return
 def wait(factors):
-    #print('Wait')
     factors.actions_list += 'Wait\n'
     return
 
